@@ -133,17 +133,6 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-Results.callout {
-  border-left-color: #198754;
-}
-div.callout-Results.callout-style-default > .callout-header {
-  background-color: rgba(25, 135, 84, 0.13);
-}
-div.callout-Results .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-Results.callout-style-default .callout-icon::before, div.callout-Results.callout-titled .callout-icon::before {
-  content: '📊';
-  background-image: none;
-}
 div.callout-Pending.callout {
   border-left-color: #f0c400;
 }
@@ -164,6 +153,17 @@ div.callout-Rcode.callout-style-default > .callout-header {
 div.callout-Rcode .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-Rcode.callout-style-default .callout-icon::before, div.callout-Rcode.callout-titled .callout-icon::before {
   content: '💻';
+  background-image: none;
+}
+div.callout-Results.callout {
+  border-left-color: #198754;
+}
+div.callout-Results.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-Results .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-Results.callout-style-default .callout-icon::before, div.callout-Results.callout-titled .callout-icon::before {
+  content: '📊';
   background-image: none;
 }
 </style>
@@ -447,7 +447,7 @@ gives this page GitHub-style IDs and those links work on both.
 -->
 <section id="analysis-plan-methenamine-hippurate-antibiotic-prophylaxis-and-vaginal-estrogen-for-recurrent-urinary-tract-infection-after-kidney-transplantation-using-usrds" class="level1">
 <h1>Analysis plan: Methenamine hippurate, antibiotic prophylaxis, and vaginal estrogen for recurrent urinary tract infection after kidney transplantation using USRDS</h1>
-<p><strong>Status:</strong> Draft; not yet adopted. Reconciles the 2019 Montefiore protocol (v1.3, 5 October 2019) and the later Aim 2 proposal text with the known limitations of USRDS Medicare data. Open points are marked “Open” where they occur; each becomes a decision issue before dependent code is written. Code examples are illustrative; final code lists require clinical review.</p>
+<p><strong>Status:</strong> Draft; not yet adopted. Reconciles the 2019 Montefiore protocol (v1.3, 5 October 2019) and the later Aim 2 proposal text with the known limitations of USRDS Medicare data. Open points are marked “Open” where they occur, each linked to its decision issue; dependent code waits until the issue is settled. Code examples are illustrative; final code lists require clinical review.</p>
 <section id="scope-and-reporting-framework" class="level2">
 <h2 class="anchored" data-anchor-id="scope-and-reporting-framework">Scope and reporting framework</h2>
 <p>This document is the authoritative specification of the study’s scientific objectives, population, definitions, estimands and statistical methods. <code>ARCHITECTURE.md</code> documents the implementation, <code>AGENTS.md</code> the working conventions, and GitHub Issues the open decisions and implementation status. Neither file supersedes this plan.</p>
@@ -633,11 +633,11 @@ gives this page GitHub-style IDs and those links work on both.
 <h2 class="anchored" data-anchor-id="4-study-population">4. Study population</h2>
 <p>Adult (≥18 at transplant) kidney recipients with a functioning graft and eligible observation time (<a href="#31-files-and-observation">§3.1</a>) who meet the criteria below.</p>
 <div class="pending-note">
-<p><strong>Time since transplant.</strong> Time zero is ≥180 days after the most recent kidney transplant. <strong>Open:</strong> 180 days vs.&nbsp;90 days (decision issue to be opened).</p>
+<p><strong>Time since transplant.</strong> Time zero is ≥180 days after the most recent kidney transplant. <strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/1">#1</a> 180 days vs.&nbsp;90 days.</p>
 </div>
 <p><strong>Recurrent UTI.</strong> ≥2 treated UTI episodes (<a href="#71-treated-uti-episode-primary-building-block">§7.1</a>) within 180 days, or ≥3 within 365 days, with the qualifying episode on or after day 180 post-transplant. Episodes before the most recent transplant do not count.</p>
 <div class="pending-note">
-<p><strong>New user.</strong> No fill of methenamine or prophylactic-dose antibiotic in the 365-day lookback. Recipients receiving TMP-SMX at <em>Pneumocystis</em> prophylaxis dosing at time zero are eligible; that exposure is a baseline covariate. <strong>Open:</strong> alternatively exclude, or restrict to recipients ≥12 months post-transplant when PJP prophylaxis has usually stopped (decision issue to be opened).</p>
+<p><strong>New user.</strong> No fill of methenamine or prophylactic-dose antibiotic in the 365-day lookback. Recipients receiving TMP-SMX at <em>Pneumocystis</em> prophylaxis dosing at time zero are eligible; that exposure is a baseline covariate. <strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/2">#2</a> alternatively exclude, or restrict to recipients ≥12 months post-transplant when PJP prophylaxis has usually stopped.</p>
 </div>
 <p><strong>Exclusions at time zero.</strong> Dialysis or graft failure, pregnancy codes in the prior 280 days, chronic indwelling catheter or nephrostomy codes (sensitivity: include).</p>
 <p><strong>Repeated eligibility.</strong> The primary analysis uses each recipient’s first qualifying time zero. A sequential-trials sensitivity analysis uses every eligible qualifying episode, with robust variance by person.</p>
@@ -656,14 +656,14 @@ gives this page GitHub-style IDs and those links work on both.
 <h3 class="anchored" data-anchor-id="53-prophylactic-dose-antibiotics">5.3 Prophylactic-dose antibiotics</h3>
 <p>An initiating fill with days supply ≥28 and a daily dose in the prophylactic range, for example nitrofurantoin ≤100 mg/day, cephalexin ≤500 mg/day, trimethoprim 100 mg/day, fosfomycin every 7–10 days, or TMP-SMX given as prophylaxis outside the PJP context. Daily dose = strength × quantity ÷ days supply, after collapsing same-day fills (<a href="#56-dispensing-records">§5.6</a>). Initiation is classified from the first fill alone; later duration is not used to assign arms, because that would use future information.</p>
 <div class="pending-note">
-<p><strong>Open:</strong> final drug list and dose thresholds; whether TMP-SMX can ever count as UTI prophylaxis given identical PJP dosing (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/3">#3</a> final drug list and dose thresholds; whether TMP-SMX can ever count as UTI prophylaxis given identical PJP dosing.</p>
 </div>
 </section>
 <section id="54-continuous-use-episodes-per-protocol-analyses" class="level3">
 <h3 class="anchored" data-anchor-id="54-continuous-use-episodes-per-protocol-analyses">5.4 Continuous-use episodes (per-protocol analyses)</h3>
 <p>Consecutive fills of the same agent form an episode when the gap after accounting for carried-over supply is ≤30 days. Supply is extended by overlapping inpatient days (L6). Discontinuation = episode end + grace period. Switching between strategies is a protocol deviation.</p>
 <div class="pending-note">
-<p><strong>Open:</strong> grace period of 15 days as in Santos et al.<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>, or 30 days (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/4">#4</a> grace period of 15 days as in Santos et al.<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>, or 30 days.</p>
 </div>
 </section>
 <section id="55-surveillance-intensity" class="level3">
@@ -674,7 +674,7 @@ gives this page GitHub-style IDs and those links work on both.
 <h3 class="anchored" data-anchor-id="56-dispensing-records">5.6 Dispensing records</h3>
 <p>Exclude non-oral dosage forms where relevant; require positive quantity and days supply; collapse same-day fills of the same drug by summing quantity and days supply. Strength is parsed from the drug record, with drug-specific prophylactic vs.&nbsp;treatment thresholds (<a href="#53-prophylactic-dose-antibiotics">§5.3</a>).</p>
 <div class="pending-note">
-<p><strong>Open:</strong> whether to also require positive patient pay, as the Santos pipeline did<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>; that filter excludes $0 low-income-subsidy fills and is proposed to be dropped (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/5">#5</a> whether to also require positive patient pay, as the Santos pipeline did<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>; that filter excludes $0 low-income-subsidy fills and is proposed to be dropped.</p>
 </div>
 </section>
 <section id="57-time-zero" class="level3">
@@ -696,7 +696,7 @@ gives this page GitHub-style IDs and those links work on both.
 <h3 class="anchored" data-anchor-id="71-treated-uti-episode-primary-building-block">7.1 Treated UTI episode (primary building block)</h3>
 <p><strong>Inpatient.</strong> An inpatient stay with a UTI or pyelonephritis code in the principal position (sensitivity: any position).</p>
 <div class="pending-note">
-<p><strong>Outpatient.</strong> An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. <strong>Open:</strong> the treatment window (decision issue to be opened).</p>
+<p><strong>Outpatient.</strong> An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. <strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/6">#6</a> the treatment window.</p>
 </div>
 <p><strong>Episodes.</strong> Codes and treatment within 14 days are one episode; the episode date is its first code.</p>
 </section>
@@ -704,7 +704,7 @@ gives this page GitHub-style IDs and those links work on both.
 <h3 class="anchored" data-anchor-id="72-primary-outcome">7.2 Primary outcome</h3>
 <p>Number of treated UTI episodes within 12 months after the 30-day grace period ends, summarized as the mean cumulative count with death as a competing event<span class="citation" data-cites="ghosh2000"><sup><a href="#ref-ghosh2000" role="doc-biblioref">14</a></sup></span>.</p>
 <div class="pending-note">
-<p><strong>Open:</strong> whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/7">#7</a> whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast.</p>
 </div>
 </section>
 <section id="73-secondary-outcomes" class="level3">
@@ -736,7 +736,7 @@ gives this page GitHub-style IDs and those links work on both.
 <h3 class="anchored" data-anchor-id="83-vaginal-estrogen-trial-aim-3">8.3 Vaginal estrogen trial (Aim 3)</h3>
 <p>Same machinery as Aim 2, restricted to women aged ≥50 (menopause proxy) meeting <a href="#4-study-population">§4</a>. Strategies: initiate vaginal estrogen within 30 days vs.&nbsp;not. Initiation of methenamine or antibiotic prophylaxis during follow-up is a time-varying covariate in the censoring weights for the per-protocol analysis; it is not a deviation in the intention-to-initiate analysis.</p>
 <div class="pending-note">
-<p><strong>Open:</strong> the age threshold (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/8">#8</a> the age threshold.</p>
 </div>
 </section>
 <section id="84-prepost-with-a-regression-to-the-mean-reference-aim-4" class="level3">
@@ -750,13 +750,13 @@ gives this page GitHub-style IDs and those links work on both.
 <section id="86-multiplicity" class="level3">
 <h3 class="anchored" data-anchor-id="86-multiplicity">8.6 Multiplicity</h3>
 <div class="pending-note">
-<p><strong>Open:</strong> not yet specified (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/10">#10</a> not yet specified.</p>
 </div>
 </section>
 <section id="87-missing-data" class="level3">
 <h3 class="anchored" data-anchor-id="87-missing-data">8.7 Missing data</h3>
 <div class="pending-note">
-<p><strong>Open:</strong> not yet specified (decision issue to be opened).</p>
+<p><strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/11">#11</a> not yet specified.</p>
 </div>
 </section>
 <section id="88-software" class="level3">
@@ -767,7 +767,7 @@ gives this page GitHub-style IDs and those links work on both.
 <section id="9-sensitivity-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="9-sensitivity-analyses">9. Sensitivity analyses</h2>
 <ol type="1">
-<li><strong>Negative-control outcome.</strong> An outcome that methenamine should not affect but that shares healthcare-contact pathways<span class="citation" data-cites="lipsitch2010"><sup><a href="#ref-lipsitch2010" role="doc-biblioref">15</a></sup></span>. A non-null estimate flags residual confounding. <strong>Open:</strong> the outcome; candidates are herpes zoster and hip fracture (decision issue to be opened).</li>
+<li><strong>Negative-control outcome.</strong> An outcome that methenamine should not affect but that shares healthcare-contact pathways<span class="citation" data-cites="lipsitch2010"><sup><a href="#ref-lipsitch2010" role="doc-biblioref">15</a></sup></span>. A non-null estimate flags residual confounding. <strong>Open:</strong> <a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/9">#9</a> the outcome; candidates are herpes zoster and hip fracture.</li>
 <li><strong>Quantitative bias analysis</strong> for exposure misclassification from out-of-plan fills (L4), using the low-income-subsidy restriction as an anchor.</li>
 <li><strong>Instrumental variable (exploratory).</strong> Center- or prescriber-level methenamine preference in the prior calendar year, as suggested in the 2019 protocol; report the instrument’s strength and assumptions explicitly.</li>
 <li><strong>Analyses named elsewhere in this plan:</strong> broader <code>MPAB</code>+<code>MPO</code> coverage (L1); restriction to low-income-subsidy enrollees (L4); varied prophylaxis and grace-period rules (L5, <a href="#54-continuous-use-episodes-per-protocol-analyses">§5.4</a>); era-specific estimates (L14); including recipients with chronic catheter or nephrostomy codes and sequential trials using every qualifying episode (<a href="#4-study-population">§4</a>); inpatient UTI in any diagnosis position (<a href="#71-treated-uti-episode-primary-building-block">§7.1</a>); weight truncation (<a href="#82-primary-analysis-aim-2">§8.2</a>).</li>
