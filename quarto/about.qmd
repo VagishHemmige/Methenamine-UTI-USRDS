@@ -1,0 +1,38 @@
+---
+title: "About"
+format: html
+---
+
+## The study
+
+This study asks whether methenamine hippurate, compared with antibiotic prophylaxis or with neither, reduces recurrent urinary tract infection after kidney transplantation. It is at the planning stage: there is no active IRB approval, no data are in use, and the analysis plan is a draft.
+
+-   **Vagish Hemmige**
+
+Vagish Hemmige makes the scientific decisions. Open decisions are marked in the analysis plan and listed in [GitHub Issues](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues).
+
+## This repository
+
+`R/main.R` will run the scripts in order. For now the scripts are the R Analysis Workflow plugin's starter files, which run on a few synthetic numbers and touch no data. The study will use the United States Renal Data System (USRDS), including its linked Medicare claims, loaded through the [usRds](https://vagishhemmige.github.io/usRds/) package. USRDS data are restricted under a data use agreement, so they will never be in the repository; the code will run only where an authorized person has access to them.
+
+Contributions follow the rules in [`AGENTS.md`](agents.qmd); known issues and open decisions are tracked in [Issues](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues).
+
+## How this website was created
+
+The site is built with [Quarto](https://quarto.org) from the analysis scripts themselves. Each code page imports the labelled sections of its script from `R/` and shows them with an explanation; the site never runs the analysis, so it is built without the analysis data. A GitHub Actions workflow renders and publishes it whenever `master` changes.
+
+The repository follows the R Analysis Workflow plugin and the layout of [Cryptococcus-missed-diagnosis-USRDS](https://github.com/VagishHemmige/Cryptococcus-missed-diagnosis-USRDS). AI assistants may help draft and review code and documentation. They never see USRDS data, they work on synthetic data only, and changes reach `master` through pull requests a person reviews and merges.
+
+Four documents describe the project. In short: the plan is the scientific intent, the architecture is the workflow as implemented, and `AGENTS.md` holds the rules for working together.
+
+-   [**Analysis plan**](analysis-plan.qmd): *what the analysis is meant to do, and why.* The question, the population, the methods, and the open decisions. Code implements it and does not redefine it.
+-   [**Architecture**](architecture.qmd): *how the code does it.* The scripts, the order they run in, what each needs and produces, and how data flow between them.
+-   [**AGENTS.md**](agents.qmd): *how people and AI assistants work on the project.* Rules for restricted data, coding, checks, proposing changes and getting a person's approval.
+-   [**Repository blueprint**](repository-blueprint.qmd): *the layout every project of this kind starts from*, which the architecture document then describes as built.
+
+## Pages
+
+-   [**Clinical background**](background.qmd): why the question matters and what earlier studies found.
+-   [**Setup**](setup.qmd): packages and shared constants.
+-   [**Functions**](functions.qmd): reusable helper functions.
+-   [**1. Example step**](example.qmd): the starter's synthetic demonstration step, to be replaced by the first real script.

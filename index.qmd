@@ -1,0 +1,20 @@
+---
+title: "Overview"
+format: html
+---
+
+## Clinical background
+
+Single-center studies report fewer urinary tract infections (UTIs) after kidney transplant recipients start methenamine hippurate, but they compared each patient before and after starting, with no comparison group [@hollyer2019; @sweiss2022; @quinterocardona2020]. Prophylaxis is usually started when infections peak, so some of the later decline would be expected anyway. In women without a transplant, a randomized trial found methenamine noninferior to daily antibiotic prophylaxis [@harding2022altar]. There is no randomized evidence in kidney transplant recipients. The [clinical background](quarto/background.qmd) page has more.
+
+## What this analysis does
+
+This study will use the United States Renal Data System (USRDS), with linked Medicare Parts A, B and D claims, to describe how methenamine, prophylactic-dose antibiotics and vaginal estrogen are used after kidney transplantation. It will also compare starting methenamine, starting antibiotic prophylaxis, or starting neither among recipients with recurrent UTI.
+
+## Methods
+
+The comparisons are emulations of target trials, analyzed by cloning, censoring and weighting, with reporting following STROBE, RECORD and TARGET [@hernan2016target; @vonelm2007strobe; @benchimol2015record; @cashin2025target]. The [analysis plan](quarto/analysis-plan.qmd) is the authoritative specification.
+
+## Status
+
+This is a planning repository. There is no active IRB approval, no data are in use, and the analysis plan is a draft that has not been adopted. Open decisions are marked in the plan and tracked in [GitHub Issues](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues).

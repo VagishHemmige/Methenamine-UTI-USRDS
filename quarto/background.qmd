@@ -1,0 +1,8 @@
+---
+title: "Clinical background"
+format: html
+---
+
+Single-center studies in kidney transplant recipients report fewer urinary tract infections (UTIs) after methenamine hippurate is started [@hollyer2019; @sweiss2022; @quinterocardona2020]. Each compared patients before and after starting, without a comparison group. Prophylaxis tends to be started when infections are at their most frequent, so a later decline is expected from regression to the mean alone, whatever the drug does.
+
+In women with recurrent UTI who had not had a transplant, the ALTAR randomized trial found methenamine hippurate noninferior to daily antibiotic prophylaxis [@harding2022altar], and a companion analysis examined its cost-effectiveness [@king2024altarcea]. No randomized trial has been done in kidney transplant recipients.

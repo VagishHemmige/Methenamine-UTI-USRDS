@@ -1,0 +1,34 @@
+---
+title: "Functions"
+format: html
+---
+
+This script defines the reusable helper functions used by the analysis scripts.
+
+::: {.Rcode title="Source code"}
+The full R script is available at:
+
+-   [`R/functions.R`](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/blob/master/R/functions.R)
+
+This R script file is itself reliant on the following helper files:
+
+-   [`R/setup.R`](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/blob/master/R/setup.R)
+
+The code sections below are imported directly from that script when this page is rendered.
+:::
+
+```{r}
+#| include: false
+#| eval: true
+#| cache: false
+knitr::read_chunk("../R/functions.R")
+```
+
+## Scale values
+
+The starter's demonstration helper: `scale_values()` multiplies a vector of values by a multiplier and returns the result. The example step uses it.
+
+```{r}
+#| label: scale-values
+#| eval: false
+```
