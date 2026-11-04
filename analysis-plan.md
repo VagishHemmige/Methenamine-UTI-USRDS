@@ -1,6 +1,6 @@
 # Analysis plan: Methenamine hippurate, antibiotic prophylaxis, and vaginal estrogen for recurrent urinary tract infection after kidney transplantation using USRDS
 
-**Status:** Draft; not yet adopted. Reconciles the 2019 Montefiore protocol (v1.3, 5 October 2019) and the later Aim 2 proposal text with the known limitations of USRDS Medicare data. Open points are marked "Open" where they occur; each becomes a decision issue before dependent code is written. Code examples are illustrative; final code lists require clinical review.
+**Status:** Draft; not yet adopted. Reconciles the 2019 Montefiore protocol (v1.3, 5 October 2019) and the later Aim 2 proposal text with the known limitations of USRDS Medicare data. Open points are marked "Open" where they occur, each linked to its decision issue; dependent code waits until the issue is settled. Code examples are illustrative; final code lists require clinical review.
 
 ## Scope and reporting framework
 
@@ -80,11 +80,11 @@ Preliminary work in an earlier release, with Part D claims for 2006–2014, foun
 
 Adult (≥18 at transplant) kidney recipients with a functioning graft and eligible observation time ([§3.1](#31-files-and-observation)) who meet the criteria below.
 
-**Time since transplant.** Time zero is ≥180 days after the most recent kidney transplant. **Open:** 180 days vs. 90 days (decision issue to be opened).
+**Time since transplant.** Time zero is ≥180 days after the most recent kidney transplant. **Open:** [#1](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/1) 180 days vs. 90 days.
 
 **Recurrent UTI.** ≥2 treated UTI episodes ([§7.1](#71-treated-uti-episode-primary-building-block)) within 180 days, or ≥3 within 365 days, with the qualifying episode on or after day 180 post-transplant. Episodes before the most recent transplant do not count.
 
-**New user.** No fill of methenamine or prophylactic-dose antibiotic in the 365-day lookback. Recipients receiving TMP-SMX at *Pneumocystis* prophylaxis dosing at time zero are eligible; that exposure is a baseline covariate. **Open:** alternatively exclude, or restrict to recipients ≥12 months post-transplant when PJP prophylaxis has usually stopped (decision issue to be opened).
+**New user.** No fill of methenamine or prophylactic-dose antibiotic in the 365-day lookback. Recipients receiving TMP-SMX at *Pneumocystis* prophylaxis dosing at time zero are eligible; that exposure is a baseline covariate. **Open:** [#2](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/2) alternatively exclude, or restrict to recipients ≥12 months post-transplant when PJP prophylaxis has usually stopped.
 
 **Exclusions at time zero.** Dialysis or graft failure, pregnancy codes in the prior 280 days, chronic indwelling catheter or nephrostomy codes (sensitivity: include).
 
@@ -101,12 +101,12 @@ Estradiol vaginal cream, tablets/inserts and low-dose ring, and conjugated estro
 ### 5.3 Prophylactic-dose antibiotics
 An initiating fill with days supply ≥28 and a daily dose in the prophylactic range, for example nitrofurantoin ≤100 mg/day, cephalexin ≤500 mg/day, trimethoprim 100 mg/day, fosfomycin every 7–10 days, or TMP-SMX given as prophylaxis outside the PJP context. Daily dose = strength × quantity ÷ days supply, after collapsing same-day fills ([§5.6](#56-dispensing-records)). Initiation is classified from the first fill alone; later duration is not used to assign arms, because that would use future information.
 
-**Open:** final drug list and dose thresholds; whether TMP-SMX can ever count as UTI prophylaxis given identical PJP dosing (decision issue to be opened).
+**Open:** [#3](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/3) final drug list and dose thresholds; whether TMP-SMX can ever count as UTI prophylaxis given identical PJP dosing.
 
 ### 5.4 Continuous-use episodes (per-protocol analyses)
 Consecutive fills of the same agent form an episode when the gap after accounting for carried-over supply is ≤30 days. Supply is extended by overlapping inpatient days (L6). Discontinuation = episode end + grace period. Switching between strategies is a protocol deviation.
 
-**Open:** grace period of 15 days as in Santos et al. [@santos2016], or 30 days (decision issue to be opened).
+**Open:** [#4](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/4) grace period of 15 days as in Santos et al. [@santos2016], or 30 days.
 
 ### 5.5 Surveillance intensity
 Patient level: number of urine culture claims (e.g., CPT 87086, 87088) in the lookback. Center level: mean annual urine cultures per recipient among Part D-covered recipients without a UTI diagnosis, by transplant center and year, as proposed in the Aim 2 text.
@@ -114,7 +114,7 @@ Patient level: number of urine culture claims (e.g., CPT 87086, 87088) in the lo
 ### 5.6 Dispensing records
 Exclude non-oral dosage forms where relevant; require positive quantity and days supply; collapse same-day fills of the same drug by summing quantity and days supply. Strength is parsed from the drug record, with drug-specific prophylactic vs. treatment thresholds ([§5.3](#53-prophylactic-dose-antibiotics)).
 
-**Open:** whether to also require positive patient pay, as the Santos pipeline did [@santos2016]; that filter excludes $0 low-income-subsidy fills and is proposed to be dropped (decision issue to be opened).
+**Open:** [#5](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/5) whether to also require positive patient pay, as the Santos pipeline did [@santos2016]; that filter excludes $0 low-income-subsidy fills and is proposed to be dropped.
 
 ### 5.7 Time zero
 The end date of the qualifying (second or third) treated UTI episode, on which the recurrent-UTI criterion ([§4](#4-study-population)) is met.
@@ -132,14 +132,14 @@ Strategies, each started within 30 days of time zero: (A) start methenamine; (B)
 
 **Inpatient.** An inpatient stay with a UTI or pyelonephritis code in the principal position (sensitivity: any position).
 
-**Outpatient.** An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. **Open:** the treatment window (decision issue to be opened).
+**Outpatient.** An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. **Open:** [#6](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/6) the treatment window.
 
 **Episodes.** Codes and treatment within 14 days are one episode; the episode date is its first code.
 
 ### 7.2 Primary outcome
 Number of treated UTI episodes within 12 months after the 30-day grace period ends, summarized as the mean cumulative count with death as a competing event [@ghosh2000].
 
-**Open:** whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast (decision issue to be opened).
+**Open:** [#7](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/7) whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast.
 
 ### 7.3 Secondary outcomes
 UTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; *Clostridioides difficile* infection; all-cause hospitalization; graft failure; death; Medicare payments (via `usRds` cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).
@@ -163,7 +163,7 @@ Annual period prevalence of each exposure per 1,000 Part D-covered recipient-yea
 ### 8.3 Vaginal estrogen trial (Aim 3)
 Same machinery as Aim 2, restricted to women aged ≥50 (menopause proxy) meeting [§4](#4-study-population). Strategies: initiate vaginal estrogen within 30 days vs. not. Initiation of methenamine or antibiotic prophylaxis during follow-up is a time-varying covariate in the censoring weights for the per-protocol analysis; it is not a deviation in the intention-to-initiate analysis.
 
-**Open:** the age threshold (decision issue to be opened).
+**Open:** [#8](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/8) the age threshold.
 
 ### 8.4 Pre/post with a regression-to-the-mean reference (Aim 4)
 Among methenamine initiators, compare treated UTI episode rates in the 12 months before and after initiation (Poisson or negative binomial with person-level clustering, as in the 2019 protocol). Repeat the identical calculation among eligible non-initiators anchored at the same qualifying-episode definition and matched on prior UTI count, time since transplant and calendar year. The difference between the two before/after ratios is the descriptive quantity of interest. Report this analysis as illustrating regression to the mean, not as a causal effect.
@@ -172,17 +172,17 @@ Among methenamine initiators, compare treated UTI episode rates in the 12 months
 Prespecified subgroups: sex, age ≥65, diabetes, time since transplant (<2 vs ≥2 years), urologic primary disease, ICD era.
 
 ### 8.6 Multiplicity
-**Open:** not yet specified (decision issue to be opened).
+**Open:** [#10](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/10) not yet specified.
 
 ### 8.7 Missing data
-**Open:** not yet specified (decision issue to be opened).
+**Open:** [#11](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/11) not yet specified.
 
 ### 8.8 Software
 R, with USRDS files accessed through `usRds`. Record the `usRds` version or commit and the USRDS release for every result.
 
 ## 9. Sensitivity analyses
 
-1. **Negative-control outcome.** An outcome that methenamine should not affect but that shares healthcare-contact pathways [@lipsitch2010]. A non-null estimate flags residual confounding. **Open:** the outcome; candidates are herpes zoster and hip fracture (decision issue to be opened).
+1. **Negative-control outcome.** An outcome that methenamine should not affect but that shares healthcare-contact pathways [@lipsitch2010]. A non-null estimate flags residual confounding. **Open:** [#9](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/9) the outcome; candidates are herpes zoster and hip fracture.
 2. **Quantitative bias analysis** for exposure misclassification from out-of-plan fills (L4), using the low-income-subsidy restriction as an anchor.
 3. **Instrumental variable (exploratory).** Center- or prescriber-level methenamine preference in the prior calendar year, as suggested in the 2019 protocol; report the instrument's strength and assumptions explicitly.
 4. **Analyses named elsewhere in this plan:** broader `MPAB`+`MPO` coverage (L1); restriction to low-income-subsidy enrollees (L4); varied prophylaxis and grace-period rules (L5, [§5.4](#54-continuous-use-episodes-per-protocol-analyses)); era-specific estimates (L14); including recipients with chronic catheter or nephrostomy codes and sequential trials using every qualifying episode ([§4](#4-study-population)); inpatient UTI in any diagnosis position ([§7.1](#71-treated-uti-episode-primary-building-block)); weight truncation ([§8.2](#82-primary-analysis-aim-2)).
