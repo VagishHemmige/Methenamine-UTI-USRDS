@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vagish Hemmige">
+
+<title>Analysis plan – Methenamine and recurrent UTI after kidney transplant</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../quarto/architecture.html" rel="next">
+<link href="../quarto/example.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-66ae90e4418e9d0ac3caa4b8c3bef75c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/issue-comments-0.3.0/issue-comments.js"></script>
+<link href="../site_libs/quarto-contrib/issue-comments-0.3.0/issue-comments.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+div.callout-Results.callout {
+  border-left-color: #198754;
+}
+div.callout-Results.callout-style-default > .callout-header {
+  background-color: rgba(25, 135, 84, 0.13);
+}
+div.callout-Results .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-Results.callout-style-default .callout-icon::before, div.callout-Results.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-Pending.callout {
+  border-left-color: #f0c400;
+}
+div.callout-Pending.callout-style-default > .callout-header {
+  background-color: rgba(240, 196, 0, 0.13);
+}
+div.callout-Pending .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-Pending.callout-style-default .callout-icon::before, div.callout-Pending.callout-titled .callout-icon::before {
+  content: '⏳';
+  background-image: none;
+}
+div.callout-Rcode.callout {
+  border-left-color: #d63384;
+}
+div.callout-Rcode.callout-style-default > .callout-header {
+  background-color: rgba(214, 51, 132, 0.13);
+}
+div.callout-Rcode .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-Rcode.callout-style-default .callout-icon::before, div.callout-Rcode.callout-titled .callout-icon::before {
+  content: '💻';
+  background-image: none;
+}
+</style>
+<script>window.ISSUE_COMMENTS = {"contact":"mailto:vagish.hemmige@gmail.com","endpoint":"https://script.google.com/macros/s/AKfycbyE8fNBvy3vfuAnuQqdjpCTR8i2zYI-KSvGzhkGlQRYevI1I6auqq9H-mIk2yrXCaIROA/exec","owner":"Vagish Hemmige","pageButton":false,"passcode":true,"preview":true};</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../quarto/analysis-plan.html">Project documents</a></li><li class="breadcrumb-item"><a href="../quarto/analysis-plan.html">Analysis plan</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Methenamine and recurrent UTI after kidney transplant</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><i class="bi bi-house" role="img">
+</i> 
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Background</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/background.html" class="sidebar-item-text sidebar-link"><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text">Clinical background</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Setup and helper functions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/setup.html" class="sidebar-item-text sidebar-link"><i class="bi bi-laptop" role="img">
+</i> 
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/functions.html" class="sidebar-item-text sidebar-link"><i class="bi bi-laptop" role="img">
+</i> 
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data processing and analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/example.html" class="sidebar-item-text sidebar-link"><i class="bi bi-laptop" role="img">
+</i> 
+ <span class="menu-text">1. Example step</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Project documents</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/analysis-plan.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-file-earmark-ruled" role="img">
+</i> 
+ <span class="menu-text">Analysis plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/architecture.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-ruled" role="img">
+</i> 
+ <span class="menu-text">Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/agents.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-ruled" role="img">
+</i> 
+ <span class="menu-text">AGENTS.md</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/repository-blueprint.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-ruled" role="img">
+</i> 
+ <span class="menu-text">Repository blueprint</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/about.html" class="sidebar-item-text sidebar-link"><i class="bi bi-info-circle" role="img">
+</i> 
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analysis-plan-methenamine-hippurate-antibiotic-prophylaxis-and-vaginal-estrogen-for-recurrent-urinary-tract-infection-after-kidney-transplantation-using-usrds" id="toc-analysis-plan-methenamine-hippurate-antibiotic-prophylaxis-and-vaginal-estrogen-for-recurrent-urinary-tract-infection-after-kidney-transplantation-using-usrds" class="nav-link active" data-scroll-target="#analysis-plan-methenamine-hippurate-antibiotic-prophylaxis-and-vaginal-estrogen-for-recurrent-urinary-tract-infection-after-kidney-transplantation-using-usrds">Analysis plan: Methenamine hippurate, antibiotic prophylaxis, and vaginal estrogen for recurrent urinary tract infection after kidney transplantation using USRDS</a>
+  <ul class="collapse">
+  <li><a href="#scope-and-reporting-framework" id="toc-scope-and-reporting-framework" class="nav-link" data-scroll-target="#scope-and-reporting-framework">Scope and reporting framework</a></li>
+  <li><a href="#1-objective" id="toc-1-objective" class="nav-link" data-scroll-target="#1-objective">1. Objective</a></li>
+  <li><a href="#2-design" id="toc-2-design" class="nav-link" data-scroll-target="#2-design">2. Design</a>
+  <ul class="collapse">
+  <li><a href="#21-relation-to-the-2019-protocol" id="toc-21-relation-to-the-2019-protocol" class="nav-link" data-scroll-target="#21-relation-to-the-2019-protocol">2.1 Relation to the 2019 protocol</a></li>
+  </ul></li>
+  <li><a href="#3-data-source" id="toc-3-data-source" class="nav-link" data-scroll-target="#3-data-source">3. Data source</a>
+  <ul class="collapse">
+  <li><a href="#31-files-and-observation" id="toc-31-files-and-observation" class="nav-link" data-scroll-target="#31-files-and-observation">3.1 Files and observation</a></li>
+  <li><a href="#32-usrds-data-limitations-and-how-this-plan-handles-them" id="toc-32-usrds-data-limitations-and-how-this-plan-handles-them" class="nav-link" data-scroll-target="#32-usrds-data-limitations-and-how-this-plan-handles-them">3.2 USRDS data limitations and how this plan handles them</a></li>
+  <li><a href="#33-prior-use-of-these-data" id="toc-33-prior-use-of-these-data" class="nav-link" data-scroll-target="#33-prior-use-of-these-data">3.3 Prior use of these data</a></li>
+  </ul></li>
+  <li><a href="#4-study-population" id="toc-4-study-population" class="nav-link" data-scroll-target="#4-study-population">4. Study population</a></li>
+  <li><a href="#5-exposure-and-time-zero" id="toc-5-exposure-and-time-zero" class="nav-link" data-scroll-target="#5-exposure-and-time-zero">5. Exposure and time zero</a>
+  <ul class="collapse">
+  <li><a href="#51-methenamine" id="toc-51-methenamine" class="nav-link" data-scroll-target="#51-methenamine">5.1 Methenamine</a></li>
+  <li><a href="#52-vaginal-estrogen" id="toc-52-vaginal-estrogen" class="nav-link" data-scroll-target="#52-vaginal-estrogen">5.2 Vaginal estrogen</a></li>
+  <li><a href="#53-prophylactic-dose-antibiotics" id="toc-53-prophylactic-dose-antibiotics" class="nav-link" data-scroll-target="#53-prophylactic-dose-antibiotics">5.3 Prophylactic-dose antibiotics</a></li>
+  <li><a href="#54-continuous-use-episodes-per-protocol-analyses" id="toc-54-continuous-use-episodes-per-protocol-analyses" class="nav-link" data-scroll-target="#54-continuous-use-episodes-per-protocol-analyses">5.4 Continuous-use episodes (per-protocol analyses)</a></li>
+  <li><a href="#55-surveillance-intensity" id="toc-55-surveillance-intensity" class="nav-link" data-scroll-target="#55-surveillance-intensity">5.5 Surveillance intensity</a></li>
+  <li><a href="#56-dispensing-records" id="toc-56-dispensing-records" class="nav-link" data-scroll-target="#56-dispensing-records">5.6 Dispensing records</a></li>
+  <li><a href="#57-time-zero" id="toc-57-time-zero" class="nav-link" data-scroll-target="#57-time-zero">5.7 Time zero</a></li>
+  <li><a href="#58-covariates" id="toc-58-covariates" class="nav-link" data-scroll-target="#58-covariates">5.8 Covariates</a></li>
+  </ul></li>
+  <li><a href="#6-comparators" id="toc-6-comparators" class="nav-link" data-scroll-target="#6-comparators">6. Comparators</a></li>
+  <li><a href="#7-outcomes" id="toc-7-outcomes" class="nav-link" data-scroll-target="#7-outcomes">7. Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#71-treated-uti-episode-primary-building-block" id="toc-71-treated-uti-episode-primary-building-block" class="nav-link" data-scroll-target="#71-treated-uti-episode-primary-building-block">7.1 Treated UTI episode (primary building block)</a></li>
+  <li><a href="#72-primary-outcome" id="toc-72-primary-outcome" class="nav-link" data-scroll-target="#72-primary-outcome">7.2 Primary outcome</a></li>
+  <li><a href="#73-secondary-outcomes" id="toc-73-secondary-outcomes" class="nav-link" data-scroll-target="#73-secondary-outcomes">7.3 Secondary outcomes</a></li>
+  <li><a href="#74-follow-up-and-censoring" id="toc-74-follow-up-and-censoring" class="nav-link" data-scroll-target="#74-follow-up-and-censoring">7.4 Follow-up and censoring</a></li>
+  </ul></li>
+  <li><a href="#8-statistical-analysis" id="toc-8-statistical-analysis" class="nav-link" data-scroll-target="#8-statistical-analysis">8. Statistical analysis</a>
+  <ul class="collapse">
+  <li><a href="#81-descriptive-analysis-aim-1" id="toc-81-descriptive-analysis-aim-1" class="nav-link" data-scroll-target="#81-descriptive-analysis-aim-1">8.1 Descriptive analysis (Aim 1)</a></li>
+  <li><a href="#82-primary-analysis-aim-2" id="toc-82-primary-analysis-aim-2" class="nav-link" data-scroll-target="#82-primary-analysis-aim-2">8.2 Primary analysis (Aim 2)</a></li>
+  <li><a href="#83-vaginal-estrogen-trial-aim-3" id="toc-83-vaginal-estrogen-trial-aim-3" class="nav-link" data-scroll-target="#83-vaginal-estrogen-trial-aim-3">8.3 Vaginal estrogen trial (Aim 3)</a></li>
+  <li><a href="#84-prepost-with-a-regression-to-the-mean-reference-aim-4" id="toc-84-prepost-with-a-regression-to-the-mean-reference-aim-4" class="nav-link" data-scroll-target="#84-prepost-with-a-regression-to-the-mean-reference-aim-4">8.4 Pre/post with a regression-to-the-mean reference (Aim 4)</a></li>
+  <li><a href="#85-effect-modification-and-subgroups" id="toc-85-effect-modification-and-subgroups" class="nav-link" data-scroll-target="#85-effect-modification-and-subgroups">8.5 Effect modification and subgroups</a></li>
+  <li><a href="#86-multiplicity" id="toc-86-multiplicity" class="nav-link" data-scroll-target="#86-multiplicity">8.6 Multiplicity</a></li>
+  <li><a href="#87-missing-data" id="toc-87-missing-data" class="nav-link" data-scroll-target="#87-missing-data">8.7 Missing data</a></li>
+  <li><a href="#88-software" id="toc-88-software" class="nav-link" data-scroll-target="#88-software">8.8 Software</a></li>
+  </ul></li>
+  <li><a href="#9-sensitivity-analyses" id="toc-9-sensitivity-analyses" class="nav-link" data-scroll-target="#9-sensitivity-analyses">9. Sensitivity analyses</a></li>
+  <li><a href="#10-disclosure-control" id="toc-10-disclosure-control" class="nav-link" data-scroll-target="#10-disclosure-control">10. Disclosure control</a></li>
+  <li><a href="#11-limitations-to-address-in-reporting" id="toc-11-limitations-to-address-in-reporting" class="nav-link" data-scroll-target="#11-limitations-to-address-in-reporting">11. Limitations to address in reporting</a></li>
+  <li><a href="#12-reporting-map" id="toc-12-reporting-map" class="nav-link" data-scroll-target="#12-reporting-map">12. Reporting map</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix-a-target-trial-protocol" id="toc-appendix-a-target-trial-protocol" class="nav-link" data-scroll-target="#appendix-a-target-trial-protocol">Appendix A: Target-trial protocol</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/edit/master/quarto/analysis-plan.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><div class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../quarto/analysis-plan.html">Project documents</a></li><li class="breadcrumb-item"><a href="../quarto/analysis-plan.html">Analysis plan</a></li></ol></nav><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Vagish Hemmige <a href="mailto:vagish.hemmige@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-Pending callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Pending</span>Provisional
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="pending">Text highlighted like this</span> is provisional: it depends on a decision the analysis plan has not yet made. To comment on any part of this page, highlight the text and use the 💬 Comment button.</p>
+</div>
+</div>
+<!--
+This page only shows analysis-plan.md from the repository root, which is the one source:
+edit that file, not this page. Its first heading is the page title.
+
+The plan links its own sections GitHub's way (for example #3-design). Quarto's
+default heading IDs drop leading numbers (#design), so `from:` above
+gives this page GitHub-style IDs and those links work on both.
+-->
+<section id="analysis-plan-methenamine-hippurate-antibiotic-prophylaxis-and-vaginal-estrogen-for-recurrent-urinary-tract-infection-after-kidney-transplantation-using-usrds" class="level1">
+<h1>Analysis plan: Methenamine hippurate, antibiotic prophylaxis, and vaginal estrogen for recurrent urinary tract infection after kidney transplantation using USRDS</h1>
+<p><strong>Status:</strong> Draft; not yet adopted. Reconciles the 2019 Montefiore protocol (v1.3, 5 October 2019) and the later Aim 2 proposal text with the known limitations of USRDS Medicare data. Open points are marked “Open” where they occur; each becomes a decision issue before dependent code is written. Code examples are illustrative; final code lists require clinical review.</p>
+<section id="scope-and-reporting-framework" class="level2">
+<h2 class="anchored" data-anchor-id="scope-and-reporting-framework">Scope and reporting framework</h2>
+<p>This document is the authoritative specification of the study’s scientific objectives, population, definitions, estimands and statistical methods. <code>ARCHITECTURE.md</code> documents the implementation, <code>AGENTS.md</code> the working conventions, and GitHub Issues the open decisions and implementation status. Neither file supersedes this plan.</p>
+<p>Reporting will follow STROBE and RECORD<span class="citation" data-cites="vonelm2007strobe benchimol2015record"><sup><a href="#ref-vonelm2007strobe" role="doc-biblioref">1</a>,<a href="#ref-benchimol2015record" role="doc-biblioref">2</a></sup></span>. The comparative analyses are specified as emulations of target trials<span class="citation" data-cites="hernan2016target"><sup><a href="#ref-hernan2016target" role="doc-biblioref">3</a></sup></span> and will also follow TARGET<span class="citation" data-cites="cashin2025target"><sup><a href="#ref-cashin2025target" role="doc-biblioref">4</a></sup></span>. The <a href="#12-reporting-map">reporting map</a> links each checklist item to a section of this plan.</p>
+</section>
+<section id="1-objective" class="level2">
+<h2 class="anchored" data-anchor-id="1-objective">1. Objective</h2>
+<p>Single-center studies report fewer UTIs after methenamine initiation in kidney transplant recipients<span class="citation" data-cites="hollyer2019 sweiss2022 quinterocardona2020"><sup><a href="#ref-hollyer2019" role="doc-biblioref">5</a>–<a href="#ref-quinterocardona2020" role="doc-biblioref">7</a></sup></span>. These were pre/post or uncontrolled comparisons. Prophylaxis is started when UTI frequency peaks, so a subsequent decline is expected from regression to the mean alone. In non-transplant women with recurrent UTI, a randomized trial found methenamine noninferior to daily antibiotic prophylaxis<span class="citation" data-cites="harding2022altar king2024altarcea"><sup><a href="#ref-harding2022altar" role="doc-biblioref">8</a>,<a href="#ref-king2024altarcea" role="doc-biblioref">9</a></sup></span>. No randomized evidence exists in kidney transplant recipients.</p>
+<p><strong>Aim 1 (descriptive pharmacoepidemiology).</strong> Among kidney transplant recipients with Medicare Parts A, B and D, describe annual use of methenamine, prophylactic-dose antibiotics and vaginal estrogen from 2006 through the last complete claims year, overall and by transplant center, and before vs.&nbsp;after publication of the ALTAR trial (March 2022).</p>
+<p><strong>Aim 2 (primary comparative effectiveness).</strong> Among recipients who meet a claims-based recurrent-UTI definition, estimate the effect of initiating (a) methenamine, (b) prophylactic-dose antibiotics, or (c) neither within 30 days, on the 12-month number of treated UTI episodes and on UTI hospitalization.</p>
+<p><strong>Aim 3 (secondary).</strong> Estimate the effect of initiating vaginal estrogen vs.&nbsp;not among women with recurrent UTI (<a href="#83-vaginal-estrogen-trial-aim-3">§8.3</a>).</p>
+<p><strong>Aim 4 (descriptive).</strong> Reproduce the 2019 pre/post analysis with an explicit regression-to-the-mean reference (<a href="#84-prepost-with-a-regression-to-the-mean-reference-aim-4">§8.4</a>).</p>
+<p>These are observational estimates subject to residual confounding by indication; <a href="#9-sensitivity-analyses">§9</a> lists the safeguards and <a href="#32-usrds-data-limitations-and-how-this-plan-handles-them">§3.2</a> the data limitations.</p>
+<p><strong>Out of scope.</strong> Phenotyping (autoencoders), individualized treatment rules (Q-learning, targeted learning) and cost-effectiveness from the Aim 2 text are deferred to a follow-on study. They depend on a validated version of the cohort, exposure and outcome definitions here and on adequate numbers within subgroups.</p>
+</section>
+<section id="2-design" class="level2">
+<h2 class="anchored" data-anchor-id="2-design">2. Design</h2>
+<p>Aims 2 and 3 are emulations of target trials of initiation strategies among recipients who meet a recurrent-UTI definition, analyzed by clone–censor–weight<span class="citation" data-cites="hernan2016target maringe2020"><sup><a href="#ref-hernan2016target" role="doc-biblioref">3</a>,<a href="#ref-maringe2020" role="doc-biblioref">10</a></sup></span>. The target-trial protocol and how the emulation achieves each component are in <a href="#appendix-a-target-trial-protocol">Appendix A</a>. Aims 1 and 4 are descriptive.</p>
+<section id="21-relation-to-the-2019-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="21-relation-to-the-2019-protocol">2.1 Relation to the 2019 protocol</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>2019 protocol / Aim 2 element</th>
+<th>This plan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pre/post Poisson regression with clustering as primary</td>
+<td>Retained as a <strong>descriptive</strong> secondary analysis with a matched non-initiator reference that quantifies regression to the mean (<a href="#84-prepost-with-a-regression-to-the-mean-reference-aim-4">§8.4</a>)</td>
+</tr>
+<tr class="even">
+<td>Comparative analyses “if sufficiently powered”</td>
+<td><strong>Primary</strong>: target trial emulation of initiation strategies among recipients meeting a recurrent-UTI definition (<a href="#4-study-population">§4</a>–<a href="#8-statistical-analysis">§8</a>, <a href="#appendix-a-target-trial-protocol">Appendix A</a>)</td>
+</tr>
+<tr class="odd">
+<td>Methenamine and topical estrogen analyzed together</td>
+<td>Methenamine vs.&nbsp;antibiotic prophylaxis vs.&nbsp;neither is the primary question; vaginal estrogen is a separate trial in women (<a href="#83-vaginal-estrogen-trial-aim-3">§8.3</a>)</td>
+</tr>
+<tr class="even">
+<td>Suppressive antibiotics as a group</td>
+<td>Prophylactic-dose antibiotics defined by dose and supply, with TMP-SMX given for <em>Pneumocystis</em> prophylaxis handled explicitly (<a href="#53-prophylactic-dose-antibiotics">§5.3</a>)</td>
+</tr>
+<tr class="odd">
+<td>Autoencoder phenotypes, Q-learning, cost-effectiveness</td>
+<td>Deferred to a later study that builds on this cohort (<a href="#1-objective">§1</a>)</td>
+</tr>
+<tr class="even">
+<td>Claims 2006–2014/2017</td>
+<td>All Part D years available in the analyzed release (Part D begins 2006)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="3-data-source" class="level2">
+<h2 class="anchored" data-anchor-id="3-data-source">3. Data source</h2>
+<section id="31-files-and-observation" class="level3">
+<h3 class="anchored" data-anchor-id="31-files-and-observation">3.1 Files and observation</h3>
+<p><strong>Files:</strong> Core (patients, payer history, death, residence, facility), transplant files, institutional (inpatient and outpatient) and physician/supplier claims, Part D drug events (<code>PDE</code>) and Part D enrollment (<code>PDENROL</code>) for each available year from 2006. Skilled nursing, home health and hospice claims are not used for outcome ascertainment.</p>
+<p><strong>Eligible observation time</strong> for a person is the set of days on which all of the following hold: on or after a kidney transplant; Medicare FFS primary Parts A and B (<code>MPAB</code>); enrolled in a stand-alone Part D plan per L3; before the administrative end date (L13); and alive.</p>
+<p><strong>Lookback:</strong> 365 days of continuous eligible observation before time zero, used for eligibility, recurrent-UTI ascertainment, new-user status and covariates.</p>
+</section>
+<section id="32-usrds-data-limitations-and-how-this-plan-handles-them" class="level3">
+<h3 class="anchored" data-anchor-id="32-usrds-data-limitations-and-how-this-plan-handles-them">3.2 USRDS data limitations and how this plan handles them</h3>
+<p>This section is binding: definitions elsewhere in the plan are written to respect it. Confirm every item against the Researcher’s Guide and appendices for the <strong>specific release analyzed</strong><span class="citation" data-cites="usrds2025guide"><sup><a href="#ref-usrds2025guide" role="doc-biblioref">11</a></sup></span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Limitation</th>
+<th>Consequence</th>
+<th>Handling in this plan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L1</td>
+<td>Claims exist only for <strong>Medicare fee-for-service</strong> periods. Medicare Advantage, Medicare-secondary-payer periods (including the employer coordination period), other insurance and uninsured periods produce no or incomplete claims. ESRD beneficiaries could newly enroll in Medicare Advantage from 2021, so the FFS share shrinks in recent years.</td>
+<td>Missing UTIs, antibiotics and covariates outside FFS primary periods; selection toward FFS beneficiaries in recent years.</td>
+<td>Require Medicare FFS primary Parts A and B (<code>MPAB</code>) for the entire lookback and censor at loss of <code>MPAB</code> (<a href="#31-files-and-observation">§3.1</a>). Report the FFS share by calendar year. Broader <code>MPAB</code>+<code>MPO</code> as a sensitivity analysis.</td>
+</tr>
+<tr class="even">
+<td>L2</td>
+<td>ESRD-based Medicare entitlement ends <strong>36 months after a functioning transplant</strong> for beneficiaries who are not ≥65 or disabled.</td>
+<td>Recurrent UTI often arises years after transplant; later-onset recurrent UTI is observable only among recipients who keep Medicare (older, disabled, graft failure). Follow-up is truncated for others.</td>
+<td>Describe the cohort by basis of Medicare entitlement and time since transplant. Treat coverage loss as censoring and model it with inverse-probability-of-censoring weights (<a href="#82-primary-analysis-aim-2">§8.2</a>). State the restricted generalizability explicitly; do not present results as representing all recipients.</td>
+</tr>
+<tr class="odd">
+<td>L3</td>
+<td><strong>Part D enrollment</strong> is separate from A/B and recorded monthly (<code>PDENROL</code> contract IDs). Months with MA-PD contracts have drug events but no FFS medical claims. Beneficiaries with retiree drug subsidy or other drug coverage have no PDE records.</td>
+<td>Drug exposure is unobservable outside stand-alone Part D months; MA-PD months would yield drugs without outcomes.</td>
+<td>Require continuous Part D enrollment, defined from monthly contract IDs, <em>and</em> <code>MPAB</code> on the same days. Allow at most one missing month inside a span (as in the Santos pipeline<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>); verify the contract-type codes for each release.</td>
+</tr>
+<tr class="even">
+<td>L4</td>
+<td>PDE records <strong>dispensings paid through Part D</strong>. Cash purchases, discount-generic programs, samples, VA and other-payer fills do not appear. Inexpensive generics (nitrofurantoin, TMP-SMX, cephalexin, methenamine) are the most likely to be bought outside the plan.</td>
+<td>Exposure misclassification, possibly differential by drug; under-ascertainment of treated outpatient UTIs.</td>
+<td>Report fills per covered person-year by drug and year as a plausibility check. Sensitivity analysis restricting to low-income-subsidy enrollees (cost sharing near zero, so out-of-plan purchase is less likely). Interpret absolute UTI rates cautiously; prioritize the hospitalization outcome, which does not depend on PDE.</td>
+</tr>
+<tr class="odd">
+<td>L5</td>
+<td>PDE shows <strong>dispensing, not ingestion or indication</strong>. Unfilled prescriptions are invisible. Prophylaxis vs.&nbsp;treatment must be inferred from drug, dose and supply.</td>
+<td>Misclassification of prophylactic vs.&nbsp;treatment courses.</td>
+<td>Dose and supply rules for prophylaxis (<a href="#53-prophylactic-dose-antibiotics">§5.3</a>); continuous-use episodes with prespecified grace periods (<a href="#54-continuous-use-episodes-per-protocol-analyses">§5.4</a>); sensitivity analyses varying the rules.</td>
+</tr>
+<tr class="even">
+<td>L6</td>
+<td><strong>Drugs given during inpatient stays</strong> are bundled into Part A and absent from PDE; some outpatient parenteral antibiotics appear only as HCPCS J-codes on Part B claims.</td>
+<td>Treatment for hospitalized UTIs is not seen in PDE; a supply appears to “run out” during a stay.</td>
+<td>Inpatient UTI episodes are identified from institutional claims, not drug data. Extend outpatient supply by the length of overlapping inpatient stays. Include Part B antibiotic HCPCS codes for outpatient treatment.</td>
+</tr>
+<tr class="odd">
+<td>L7</td>
+<td><strong>Immunosuppressants</strong> for recipients whose transplant Medicare covered are billed largely under <strong>Part B</strong> (HCPCS J75xx), not Part D; the Part B immunosuppressive drug benefit began in 2023.</td>
+<td>Immunosuppression is incompletely seen in PDE alone.</td>
+<td>Ascertain maintenance immunosuppression from Part B HCPCS and PDE together, and from transplant-file induction and discharge regimens. Verify which claim files carry Part B drug claims in the release.</td>
+</tr>
+<tr class="even">
+<td>L8</td>
+<td>The prescriber is an encrypted ID (<code>PRSCRBRUSRD_ID</code>); <strong>prescriber specialty is not available</strong> in PDE.</td>
+<td>Cannot attribute initiation to urology, nephrology or infectious diseases.</td>
+<td>Use urology and infectious-disease visits from physician/supplier specialty codes as covariates. Prescriber ID may support clustering and a prescriber-preference instrument (<a href="#9-sensitivity-analyses">§9</a>).</td>
+</tr>
+<tr class="odd">
+<td>L9</td>
+<td><strong>No laboratory or microbiology data</strong>: no urine cultures, organisms, susceptibility or creatinine. Asymptomatic bacteriuria cannot be distinguished from symptomatic infection. Resistance codes (e.g., ICD-10-CM Z16) exist only after October 2015 and are under-coded.</td>
+<td>UTI case definitions are imperfect; surveillance intensity varies by center.</td>
+<td>Outpatient UTI requires a diagnosis <strong>plus</strong> antibiotic treatment (<a href="#71-treated-uti-episode-primary-building-block">§7.1</a>). Adjust for patient-level and center-level urine-culture billing (<a href="#55-surveillance-intensity">§5.5</a>). Resistance outcomes are exploratory, ICD-10 era only.</td>
+</tr>
+<tr class="even">
+<td>L10</td>
+<td><strong>UTI diagnosis codes</strong> are nonspecific and can reflect rule-out encounters.</td>
+<td>Outcome misclassification.</td>
+<td>Require treatment for outpatient episodes; collapse codes within 14 days into one episode; report the inpatient principal-diagnosis outcome separately.</td>
+</tr>
+<tr class="odd">
+<td>L11</td>
+<td><strong>Urologic risk factors</strong> (neurogenic bladder, reflux, stents, self-catheterization, prostatic disease) are inconsistently coded.</td>
+<td>Residual confounding by indication.</td>
+<td>Use them as covariates where coded; add a negative-control outcome (<a href="#9-sensitivity-analyses">§9</a>).</td>
+</tr>
+<tr class="even">
+<td>L12</td>
+<td>Clinical transplant detail comes from transplant registration and follow-up forms (OPTN/UNOS-derived); post-transplant rejection treatment, immunosuppression changes and estimated GFR are incomplete.</td>
+<td>Imperfect adjustment for net immunosuppression and graft function.</td>
+<td>Use graft failure and retransplant dates from USRDS; rejection treatment from claims (e.g., thymoglobulin HCPCS) as a time-varying covariate where feasible.</td>
+</tr>
+<tr class="odd">
+<td>L13</td>
+<td><strong>Data currency differs by file</strong>: claims, Part D and death dates have different end dates in each release.</td>
+<td>Apparent loss to follow-up near the end of data.</td>
+<td>Define an administrative end of follow-up as the earliest complete date across the claims, PDE and enrollment files used; mortality ascertainment is not equated with claims availability.</td>
+</tr>
+<tr class="even">
+<td>L14</td>
+<td><strong>ICD-9-CM to ICD-10-CM</strong> transition on 1 October 2015.</td>
+<td>Discontinuities in coded conditions.</td>
+<td>Era-specific code lists; outpatient/professional claims follow service date and inpatient claims follow discharge date<span class="citation" data-cites="cms2015transition"><sup><a href="#ref-cms2015transition" role="doc-biblioref">13</a></sup></span>. Calendar period is a covariate; era-specific sensitivity estimates.</td>
+</tr>
+<tr class="odd">
+<td>L15</td>
+<td>Unapproved <strong>methenamine combination products</strong> (with methylene blue, phenyl salicylate and others; marketed for urinary symptom relief) may appear under methenamine generic names.</td>
+<td>Misclassification of symptomatic analgesic use as prophylaxis.</td>
+<td>Classify by NDC and generic name into single-agent methenamine hippurate, methenamine mandelate, and combination products; only single-agent products define exposure.</td>
+</tr>
+<tr class="even">
+<td>L16</td>
+<td><strong>Small cells.</strong> DUA disclosure rules.</td>
+<td>Suppression of counts 1–10 and complementary cells.</td>
+<td>Applied to all tables, figures and text; may limit center- and subgroup-level reporting (<a href="#10-disclosure-control">§10</a>).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="33-prior-use-of-these-data" class="level3">
+<h3 class="anchored" data-anchor-id="33-prior-use-of-these-data">3.3 Prior use of these data</h3>
+<p>Preliminary work in an earlier release, with Part D claims for 2006–2014, found enough transplant recipients with Part D who filled methenamine or vaginal estrogen to proceed.</p>
+</section>
+</section>
+<section id="4-study-population" class="level2">
+<h2 class="anchored" data-anchor-id="4-study-population">4. Study population</h2>
+<p>Adult (≥18 at transplant) kidney recipients with a functioning graft and eligible observation time (<a href="#31-files-and-observation">§3.1</a>) who meet the criteria below.</p>
+<div class="pending-note">
+<p><strong>Time since transplant.</strong> Time zero is ≥180 days after the most recent kidney transplant. <strong>Open:</strong> 180 days vs.&nbsp;90 days (decision issue to be opened).</p>
+</div>
+<p><strong>Recurrent UTI.</strong> ≥2 treated UTI episodes (<a href="#71-treated-uti-episode-primary-building-block">§7.1</a>) within 180 days, or ≥3 within 365 days, with the qualifying episode on or after day 180 post-transplant. Episodes before the most recent transplant do not count.</p>
+<div class="pending-note">
+<p><strong>New user.</strong> No fill of methenamine or prophylactic-dose antibiotic in the 365-day lookback. Recipients receiving TMP-SMX at <em>Pneumocystis</em> prophylaxis dosing at time zero are eligible; that exposure is a baseline covariate. <strong>Open:</strong> alternatively exclude, or restrict to recipients ≥12 months post-transplant when PJP prophylaxis has usually stopped (decision issue to be opened).</p>
+</div>
+<p><strong>Exclusions at time zero.</strong> Dialysis or graft failure, pregnancy codes in the prior 280 days, chronic indwelling catheter or nephrostomy codes (sensitivity: include).</p>
+<p><strong>Repeated eligibility.</strong> The primary analysis uses each recipient’s first qualifying time zero. A sequential-trials sensitivity analysis uses every eligible qualifying episode, with robust variance by person.</p>
+</section>
+<section id="5-exposure-and-time-zero" class="level2">
+<h2 class="anchored" data-anchor-id="5-exposure-and-time-zero">5. Exposure and time zero</h2>
+<section id="51-methenamine" class="level3">
+<h3 class="anchored" data-anchor-id="51-methenamine">5.1 Methenamine</h3>
+<p>Single-agent methenamine hippurate or methenamine mandelate, identified by NDC and generic name (L15). Combination urinary analgesic products do not count.</p>
+</section>
+<section id="52-vaginal-estrogen" class="level3">
+<h3 class="anchored" data-anchor-id="52-vaginal-estrogen">5.2 Vaginal estrogen</h3>
+<p>Estradiol vaginal cream, tablets/inserts and low-dose ring, and conjugated estrogens vaginal cream. Systemic-dose vaginal rings (estradiol acetate) and oral/transdermal estrogens are excluded from exposure and recorded as covariates.</p>
+</section>
+<section id="53-prophylactic-dose-antibiotics" class="level3">
+<h3 class="anchored" data-anchor-id="53-prophylactic-dose-antibiotics">5.3 Prophylactic-dose antibiotics</h3>
+<p>An initiating fill with days supply ≥28 and a daily dose in the prophylactic range, for example nitrofurantoin ≤100 mg/day, cephalexin ≤500 mg/day, trimethoprim 100 mg/day, fosfomycin every 7–10 days, or TMP-SMX given as prophylaxis outside the PJP context. Daily dose = strength × quantity ÷ days supply, after collapsing same-day fills (<a href="#56-dispensing-records">§5.6</a>). Initiation is classified from the first fill alone; later duration is not used to assign arms, because that would use future information.</p>
+<div class="pending-note">
+<p><strong>Open:</strong> final drug list and dose thresholds; whether TMP-SMX can ever count as UTI prophylaxis given identical PJP dosing (decision issue to be opened).</p>
+</div>
+</section>
+<section id="54-continuous-use-episodes-per-protocol-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="54-continuous-use-episodes-per-protocol-analyses">5.4 Continuous-use episodes (per-protocol analyses)</h3>
+<p>Consecutive fills of the same agent form an episode when the gap after accounting for carried-over supply is ≤30 days. Supply is extended by overlapping inpatient days (L6). Discontinuation = episode end + grace period. Switching between strategies is a protocol deviation.</p>
+<div class="pending-note">
+<p><strong>Open:</strong> grace period of 15 days as in Santos et al.<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>, or 30 days (decision issue to be opened).</p>
+</div>
+</section>
+<section id="55-surveillance-intensity" class="level3">
+<h3 class="anchored" data-anchor-id="55-surveillance-intensity">5.5 Surveillance intensity</h3>
+<p>Patient level: number of urine culture claims (e.g., CPT 87086, 87088) in the lookback. Center level: mean annual urine cultures per recipient among Part D-covered recipients without a UTI diagnosis, by transplant center and year, as proposed in the Aim 2 text.</p>
+</section>
+<section id="56-dispensing-records" class="level3">
+<h3 class="anchored" data-anchor-id="56-dispensing-records">5.6 Dispensing records</h3>
+<p>Exclude non-oral dosage forms where relevant; require positive quantity and days supply; collapse same-day fills of the same drug by summing quantity and days supply. Strength is parsed from the drug record, with drug-specific prophylactic vs.&nbsp;treatment thresholds (<a href="#53-prophylactic-dose-antibiotics">§5.3</a>).</p>
+<div class="pending-note">
+<p><strong>Open:</strong> whether to also require positive patient pay, as the Santos pipeline did<span class="citation" data-cites="santos2016"><sup><a href="#ref-santos2016" role="doc-biblioref">12</a></sup></span>; that filter excludes $0 low-income-subsidy fills and is proposed to be dropped (decision issue to be opened).</p>
+</div>
+</section>
+<section id="57-time-zero" class="level3">
+<h3 class="anchored" data-anchor-id="57-time-zero">5.7 Time zero</h3>
+<p>The end date of the qualifying (second or third) treated UTI episode, on which the recurrent-UTI criterion (<a href="#4-study-population">§4</a>) is met.</p>
+</section>
+<section id="58-covariates" class="level3">
+<h3 class="anchored" data-anchor-id="58-covariates">5.8 Covariates</h3>
+<p>Measured at or before time zero unless noted: age, sex, race and ethnicity, calendar period, time since transplant, donor type, retransplant, diabetes, primary cause of kidney failure (including urologic), coded urologic abnormalities, prior UTI episode count and hospitalizations, prior resistant-organism code (ICD-10 era), prior <em>C. difficile</em>, immunosuppression class (L7), recent rejection treatment, TMP-SMX at PJP dosing, recent urology and infectious-disease visits, patient and center urine-culture intensity, low-income subsidy and dual eligibility, transplant center region. Time-varying covariates for weights: interim UTI episodes and hospitalization.</p>
+</section>
+</section>
+<section id="6-comparators" class="level2">
+<h2 class="anchored" data-anchor-id="6-comparators">6. Comparators</h2>
+<p>Strategies, each started within 30 days of time zero: (A) start methenamine; (B) start prophylactic-dose antibiotics; (C) start neither. The A vs.&nbsp;B contrast is an active comparison of two prophylaxis decisions made at the same clinical juncture, reducing confounding by indication relative to A vs.&nbsp;C. Assignment is emulated by cloning each eligible person into all three strategies at time zero (<a href="#82-primary-analysis-aim-2">§8.2</a>); there is no matching.</p>
+</section>
+<section id="7-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="7-outcomes">7. Outcomes</h2>
+<section id="71-treated-uti-episode-primary-building-block" class="level3">
+<h3 class="anchored" data-anchor-id="71-treated-uti-episode-primary-building-block">7.1 Treated UTI episode (primary building block)</h3>
+<p><strong>Inpatient.</strong> An inpatient stay with a UTI or pyelonephritis code in the principal position (sensitivity: any position).</p>
+<div class="pending-note">
+<p><strong>Outpatient.</strong> An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. <strong>Open:</strong> the treatment window (decision issue to be opened).</p>
+</div>
+<p><strong>Episodes.</strong> Codes and treatment within 14 days are one episode; the episode date is its first code.</p>
+</section>
+<section id="72-primary-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="72-primary-outcome">7.2 Primary outcome</h3>
+<p>Number of treated UTI episodes within 12 months after the 30-day grace period ends, summarized as the mean cumulative count with death as a competing event<span class="citation" data-cites="ghosh2000"><sup><a href="#ref-ghosh2000" role="doc-biblioref">14</a></sup></span>.</p>
+<div class="pending-note">
+<p><strong>Open:</strong> whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast (decision issue to be opened).</p>
+</div>
+</section>
+<section id="73-secondary-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="73-secondary-outcomes">7.3 Secondary outcomes</h3>
+<p>UTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; <em>Clostridioides difficile</em> infection; all-cause hospitalization; graft failure; death; Medicare payments (via <code>usRds</code> cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).</p>
+</section>
+<section id="74-follow-up-and-censoring" class="level3">
+<h3 class="anchored" data-anchor-id="74-follow-up-and-censoring">7.4 Follow-up and censoring</h3>
+<p>Follow-up runs 12 months from time zero, until the outcome count horizon, death, graft failure, retransplant, loss of eligible observation (<a href="#31-files-and-observation">§3.1</a>), or the administrative end date (L13), with the censoring reason recorded.</p>
+</section>
+</section>
+<section id="8-statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="8-statistical-analysis">8. Statistical analysis</h2>
+<section id="81-descriptive-analysis-aim-1" class="level3">
+<h3 class="anchored" data-anchor-id="81-descriptive-analysis-aim-1">8.1 Descriptive analysis (Aim 1)</h3>
+<p>Annual period prevalence of each exposure per 1,000 Part D-covered recipient-years, by calendar year and center; interrupted time-series description around March 2022 (descriptive, not causal).</p>
+</section>
+<section id="82-primary-analysis-aim-2" class="level3">
+<h3 class="anchored" data-anchor-id="82-primary-analysis-aim-2">8.2 Primary analysis (Aim 2)</h3>
+<ol type="1">
+<li><strong>Clone–censor–weight.</strong> Each eligible person is cloned into all three strategies at time zero. A clone is censored when its observed treatment deviates from its strategy (for example, a strategy C clone that fills methenamine on day 12). Censoring is modeled with pooled logistic regression on baseline and time-varying covariates (<a href="#58-covariates">§5.8</a>), giving stabilized inverse-probability-of-censoring weights<span class="citation" data-cites="maringe2020"><sup><a href="#ref-maringe2020" role="doc-biblioref">10</a></sup></span>. Censoring at loss of eligible observation (L1–L3) is weighted in the same framework.</li>
+<li><strong>Estimands.</strong> Weighted mean cumulative counts and 12-month risks of UTI hospitalization by strategy. Contrasts: A vs.&nbsp;C (does methenamine reduce UTIs compared with no prophylaxis?) and A vs.&nbsp;B (how does it compare with antibiotic prophylaxis?). Report rate ratios and differences with bootstrap 95% CIs (resampling persons).</li>
+<li><strong>Per-protocol.</strong> Additionally censor at discontinuation or switching (<a href="#54-continuous-use-episodes-per-protocol-analyses">§5.4</a>) with time-varying weights.</li>
+<li><strong>Diagnostics.</strong> Weight distribution and truncation (1st/99th percentile as sensitivity), covariate balance after weighting, positivity by center and period.</li>
+<li><strong>Sample size.</strong> Determined by available data; contrasts are not described as formally powered. Report precision.</li>
+</ol>
+</section>
+<section id="83-vaginal-estrogen-trial-aim-3" class="level3">
+<h3 class="anchored" data-anchor-id="83-vaginal-estrogen-trial-aim-3">8.3 Vaginal estrogen trial (Aim 3)</h3>
+<p>Same machinery as Aim 2, restricted to women aged ≥50 (menopause proxy) meeting <a href="#4-study-population">§4</a>. Strategies: initiate vaginal estrogen within 30 days vs.&nbsp;not. Initiation of methenamine or antibiotic prophylaxis during follow-up is a time-varying covariate in the censoring weights for the per-protocol analysis; it is not a deviation in the intention-to-initiate analysis.</p>
+<div class="pending-note">
+<p><strong>Open:</strong> the age threshold (decision issue to be opened).</p>
+</div>
+</section>
+<section id="84-prepost-with-a-regression-to-the-mean-reference-aim-4" class="level3">
+<h3 class="anchored" data-anchor-id="84-prepost-with-a-regression-to-the-mean-reference-aim-4">8.4 Pre/post with a regression-to-the-mean reference (Aim 4)</h3>
+<p>Among methenamine initiators, compare treated UTI episode rates in the 12 months before and after initiation (Poisson or negative binomial with person-level clustering, as in the 2019 protocol). Repeat the identical calculation among eligible non-initiators anchored at the same qualifying-episode definition and matched on prior UTI count, time since transplant and calendar year. The difference between the two before/after ratios is the descriptive quantity of interest. Report this analysis as illustrating regression to the mean, not as a causal effect.</p>
+</section>
+<section id="85-effect-modification-and-subgroups" class="level3">
+<h3 class="anchored" data-anchor-id="85-effect-modification-and-subgroups">8.5 Effect modification and subgroups</h3>
+<p>Prespecified subgroups: sex, age ≥65, diabetes, time since transplant (&lt;2 vs ≥2 years), urologic primary disease, ICD era.</p>
+</section>
+<section id="86-multiplicity" class="level3">
+<h3 class="anchored" data-anchor-id="86-multiplicity">8.6 Multiplicity</h3>
+<div class="pending-note">
+<p><strong>Open:</strong> not yet specified (decision issue to be opened).</p>
+</div>
+</section>
+<section id="87-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="87-missing-data">8.7 Missing data</h3>
+<div class="pending-note">
+<p><strong>Open:</strong> not yet specified (decision issue to be opened).</p>
+</div>
+</section>
+<section id="88-software" class="level3">
+<h3 class="anchored" data-anchor-id="88-software">8.8 Software</h3>
+<p>R, with USRDS files accessed through <code>usRds</code>. Record the <code>usRds</code> version or commit and the USRDS release for every result.</p>
+</section>
+</section>
+<section id="9-sensitivity-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="9-sensitivity-analyses">9. Sensitivity analyses</h2>
+<ol type="1">
+<li><strong>Negative-control outcome.</strong> An outcome that methenamine should not affect but that shares healthcare-contact pathways<span class="citation" data-cites="lipsitch2010"><sup><a href="#ref-lipsitch2010" role="doc-biblioref">15</a></sup></span>. A non-null estimate flags residual confounding. <strong>Open:</strong> the outcome; candidates are herpes zoster and hip fracture (decision issue to be opened).</li>
+<li><strong>Quantitative bias analysis</strong> for exposure misclassification from out-of-plan fills (L4), using the low-income-subsidy restriction as an anchor.</li>
+<li><strong>Instrumental variable (exploratory).</strong> Center- or prescriber-level methenamine preference in the prior calendar year, as suggested in the 2019 protocol; report the instrument’s strength and assumptions explicitly.</li>
+<li><strong>Analyses named elsewhere in this plan:</strong> broader <code>MPAB</code>+<code>MPO</code> coverage (L1); restriction to low-income-subsidy enrollees (L4); varied prophylaxis and grace-period rules (L5, <a href="#54-continuous-use-episodes-per-protocol-analyses">§5.4</a>); era-specific estimates (L14); including recipients with chronic catheter or nephrostomy codes and sequential trials using every qualifying episode (<a href="#4-study-population">§4</a>); inpatient UTI in any diagnosis position (<a href="#71-treated-uti-episode-primary-building-block">§7.1</a>); weight truncation (<a href="#82-primary-analysis-aim-2">§8.2</a>).</li>
+</ol>
+</section>
+<section id="10-disclosure-control" class="level2">
+<h2 class="anchored" data-anchor-id="10-disclosure-control">10. Disclosure control</h2>
+<p>Governed by the USRDS data use agreement. Public code and code lists may be shared; restricted patient-level data may not. Suppress counts 1–10 and values derivable from complementary cells in all tables, figures and text; this may limit center- and subgroup-level reporting (L16).</p>
+</section>
+<section id="11-limitations-to-address-in-reporting" class="level2">
+<h2 class="anchored" data-anchor-id="11-limitations-to-address-in-reporting">11. Limitations to address in reporting</h2>
+<p>Restricted generalizability to recipients who keep Medicare FFS and Part D (L1–L3); residual confounding by indication (L11); exposure and outcome misclassification from dispensing-only data, out-of-plan fills and the absence of laboratory data (L4, L5, L9, L10).</p>
+</section>
+<section id="12-reporting-map" class="level2">
+<h2 class="anchored" data-anchor-id="12-reporting-map">12. Reporting map</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Checklist item</th>
+<th>Topic</th>
+<th>Plan section</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>STROBE 2</td>
+<td>Background and rationale</td>
+<td><a href="#1-objective">1</a></td>
+</tr>
+<tr class="even">
+<td>STROBE 3</td>
+<td>Objectives</td>
+<td><a href="#1-objective">1</a></td>
+</tr>
+<tr class="odd">
+<td>STROBE 4</td>
+<td>Study design</td>
+<td><a href="#2-design">2</a>, <a href="#appendix-a-target-trial-protocol">Appendix A</a></td>
+</tr>
+<tr class="even">
+<td>STROBE 5</td>
+<td>Setting, dates, follow-up</td>
+<td><a href="#31-files-and-observation">3.1</a>, <a href="#74-follow-up-and-censoring">7.4</a></td>
+</tr>
+<tr class="odd">
+<td>STROBE 6 / RECORD 6.1–6.3</td>
+<td>Eligibility, selection codes and algorithms, validation, linkage</td>
+<td><a href="#31-files-and-observation">3.1</a>, <a href="#4-study-population">4</a></td>
+</tr>
+<tr class="even">
+<td>STROBE 7 / RECORD 7.1</td>
+<td>Variables and code lists</td>
+<td><a href="#5-exposure-and-time-zero">5</a>, <a href="#7-outcomes">7</a></td>
+</tr>
+<tr class="odd">
+<td>STROBE 8</td>
+<td>Data sources and measurement</td>
+<td><a href="#3-data-source">3</a></td>
+</tr>
+<tr class="even">
+<td>STROBE 9</td>
+<td>Bias</td>
+<td><a href="#6-comparators">6</a>, <a href="#9-sensitivity-analyses">9</a>, <a href="#11-limitations-to-address-in-reporting">11</a></td>
+</tr>
+<tr class="odd">
+<td>STROBE 10</td>
+<td>Study size</td>
+<td><a href="#82-primary-analysis-aim-2">8.2</a></td>
+</tr>
+<tr class="even">
+<td>STROBE 11</td>
+<td>Quantitative variables</td>
+<td><a href="#5-exposure-and-time-zero">5</a>, <a href="#7-outcomes">7</a></td>
+</tr>
+<tr class="odd">
+<td>STROBE 12 / RECORD 12.1–12.3</td>
+<td>Statistical methods, data access, cleaning, linkage</td>
+<td><a href="#33-prior-use-of-these-data">3.3</a>, <a href="#56-dispensing-records">5.6</a>, <a href="#8-statistical-analysis">8</a>, <a href="#9-sensitivity-analyses">9</a></td>
+</tr>
+<tr class="even">
+<td>TARGET</td>
+<td>Target-trial protocol and emulation (item numbers to be checked against the statement)</td>
+<td><a href="#appendix-a-target-trial-protocol">Appendix A</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>References are stored in <code>references.bib</code>.</p>
+</section>
+<section id="appendix-a-target-trial-protocol" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-target-trial-protocol">Appendix A: Target-trial protocol</h2>
+<p>Aim 2. Aim 3 uses the same protocol with the population and strategies in <a href="#83-vaginal-estrogen-trial-aim-3">§8.3</a>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Target trial</th>
+<th>Emulation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Eligibility</td>
+<td>Adult (≥18 at transplant) kidney recipients with a functioning graft, <span class="pending">≥180 days</span> after the most recent kidney transplant, with recurrent UTI, no prophylaxis in the past 365 days</td>
+<td><a href="#4-study-population">§4</a></td>
+</tr>
+<tr class="even">
+<td>Strategies</td>
+<td>(A) start methenamine within 30 days; (B) start prophylactic-dose antibiotics within 30 days; (C) start neither within 30 days</td>
+<td><a href="#5-exposure-and-time-zero">§5</a>, <a href="#6-comparators">§6</a></td>
+</tr>
+<tr class="odd">
+<td>Assignment</td>
+<td>Randomized</td>
+<td>Clone–censor–weight at time zero<span class="citation" data-cites="maringe2020"><sup><a href="#ref-maringe2020" role="doc-biblioref">10</a></sup></span></td>
+</tr>
+<tr class="even">
+<td>Time zero</td>
+<td>Date recurrent-UTI criterion is met</td>
+<td>End date of the qualifying (second or third) treated UTI episode (<a href="#57-time-zero">§5.7</a>)</td>
+</tr>
+<tr class="odd">
+<td>Follow-up</td>
+<td>12 months</td>
+<td>Until outcome count horizon, death, graft failure, retransplant, loss of eligible observation, or administrative end (<a href="#74-follow-up-and-censoring">§7.4</a>)</td>
+</tr>
+<tr class="even">
+<td>Outcomes</td>
+<td><a href="#7-outcomes">§7</a></td>
+<td><a href="#7-outcomes">§7</a></td>
+</tr>
+<tr class="odd">
+<td>Causal contrasts</td>
+<td>Intention-to-initiate (observational analogue of ITT given initiation) and per-protocol</td>
+<td><a href="#82-primary-analysis-aim-2">§8.2</a></td>
+</tr>
+<tr class="even">
+<td>Analysis plan</td>
+<td>Comparison of outcome by assigned strategy</td>
+<td>Weighted estimators in <a href="#82-primary-analysis-aim-2">§8.2</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-vonelm2007strobe" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Elm E von, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP. The strengthening the reporting of observational studies in epidemiology (<span>STROBE</span>) statement: Guidelines for reporting observational studies. <em>The Lancet</em>. 2007;370(9596):1453-1457. doi:<a href="https://doi.org/10.1016/S0140-6736(07)61602-X">10.1016/S0140-6736(07)61602-X</a></div>
+</div>
+<div id="ref-benchimol2015record" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Benchimol EI, Smeeth L, Guttmann A, et al. The <span>REporting</span> of studies conducted using observational routinely-collected health data (<span>RECORD</span>) statement. <em>PLOS Medicine</em>. 2015;12(10):e1001885. doi:<a href="https://doi.org/10.1371/journal.pmed.1001885">10.1371/journal.pmed.1001885</a></div>
+</div>
+<div id="ref-hernan2016target" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Hernán MA, Robins JM. Using big data to emulate a target trial when a randomized trial is not available. <em>American Journal of Epidemiology</em>. 2016;183(8):758-764. doi:<a href="https://doi.org/10.1093/aje/kwv254">10.1093/aje/kwv254</a></div>
+</div>
+<div id="ref-cashin2025target" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><span class="nocase">Cashin AG, Hansford HJ, Hernán MA, Swanson SA, Lee H, et al.</span> Transparent reporting of observational studies emulating a target trial: The <span>TARGET</span> statement. <em>BMJ</em>. 2025;390:e087179. doi:<a href="https://doi.org/10.1136/bmj-2025-087179">10.1136/bmj-2025-087179</a></div>
+</div>
+<div id="ref-hollyer2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Hollyer I, Varias F, Ho B, Ison MG. Safety and efficacy of methenamine hippurate for the prevention of recurrent urinary tract infections in adult renal transplant recipients: A single center, retrospective study. <em>Transplant Infectious Disease</em>. 2019;21(3):e13063. doi:<a href="https://doi.org/10.1111/tid.13063">10.1111/tid.13063</a></div>
+</div>
+<div id="ref-sweiss2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Sweiss H, Bhayana S, Hall R, Nelson J, Kincaide E. Methenamine for recurrent urinary tract infections in solid organ transplantation. <em>Progress in Transplantation</em>. 2022;32(1):67-72. doi:<a href="https://doi.org/10.1177/15269248211064880">10.1177/15269248211064880</a></div>
+</div>
+<div id="ref-quinterocardona2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Quintero Cardona O, Hemmige VS, Puius YA. Methenamine hippurate may have particular benefit in preventing recurrent urinary tract infections in diabetic renal transplant recipients. <em>Transplant Infectious Disease</em>. 2020;22(2):e13247. doi:<a href="https://doi.org/10.1111/tid.13247">10.1111/tid.13247</a></div>
+</div>
+<div id="ref-harding2022altar" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><span class="nocase">Harding C, Mossop H, Homer T, et al.</span> Alternative to prophylactic antibiotics for the treatment of recurrent urinary tract infections in women: Multicentre, open label, randomised, non-inferiority trial. <em>BMJ</em>. 2022;376:e068229. doi:<a href="https://doi.org/10.1136/bmj-2021-068229">10.1136/bmj-2021-068229</a></div>
+</div>
+<div id="ref-king2024altarcea" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><span class="nocase">King W, Homer T, Harding C, et al.</span> Cost-effectiveness of methenamine hippurate compared with antibiotic prophylaxis for the management of recurrent urinary tract infections in secondary care: A multicentre, open-label, randomised, non-inferiority trial. <em>BMJ Open</em>. 2024;14(4):e074445. doi:<a href="https://doi.org/10.1136/bmjopen-2023-074445">10.1136/bmjopen-2023-074445</a></div>
+</div>
+<div id="ref-maringe2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Maringe C, Benitez Majano S, Exarchakou A, et al. Reflection on modern methods: Trial emulation in the presence of immortal-time bias. Assessing the benefit of major surgery for elderly lung cancer patients using observational data. <em>International Journal of Epidemiology</em>. 2020;49(5):1719-1729. doi:<a href="https://doi.org/10.1093/ije/dyaa057">10.1093/ije/dyaa057</a></div>
+</div>
+<div id="ref-usrds2025guide" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">United States Renal Data System. 2025 researcher’s guide to the USRDS database. Published online 2025. <a href="https://www.niddk.nih.gov/about-niddk/strategic-plans-reports/usrds/for-researchers/researchers-guide">https://www.niddk.nih.gov/about-niddk/strategic-plans-reports/usrds/for-researchers/researchers-guide</a></div>
+</div>
+<div id="ref-santos2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Santos CAQ, Brennan DC, Saeed MJ, Fraser VJ, Olsen MA. Pharmacoepidemiology of cytomegalovirus prophylaxis in a large retrospective cohort of kidney transplant recipients with medicare part d coverage. <em>Clinical Transplantation</em>. 2016;30(4):435-444. doi:<a href="https://doi.org/10.1111/ctr.12706">10.1111/ctr.12706</a></div>
+</div>
+<div id="ref-cms2015transition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Centers for Medicare and Medicaid Services. Coding around the compliance date. Published online 2015. <a href="https://www.cms.gov/medicare/coding/icd10/downloads/icd10listservcodingaroundcompliancedate.pdf">https://www.cms.gov/medicare/coding/icd10/downloads/icd10listservcodingaroundcompliancedate.pdf</a></div>
+</div>
+<div id="ref-ghosh2000" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Ghosh D, Lin DY. Nonparametric analysis of recurrent events and death. <em>Biometrics</em>. 2000;56(2):554-562.</div>
+</div>
+<div id="ref-lipsitch2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Lipsitch M, Tchetgen Tchetgen E, Cohen T. Negative controls: A tool for detecting confounding and bias in observational studies. <em>Epidemiology</em>. 2010;21(3):383-388.</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/vagishhemmige\.github\.io\/Methenamine-UTI-USRDS");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../quarto/example.html" class="pagination-link" aria-label="1. Example step">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Example step</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../quarto/architecture.html" class="pagination-link" aria-label="Architecture">
+        <span class="nav-page-text">Architecture</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">pagetitle:</span><span class="co"> "Analysis plan"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">from:</span><span class="co"> markdown+gfm_auto_identifiers</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">This page only shows analysis-plan.md from the repository root, which is the one source:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">edit that file, not this page. Its first heading is the page title.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">The plan links its own sections GitHub's way (for example #3-design). Quarto's</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">default heading IDs drop leading numbers (#design), so `from:` above</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">gives this page GitHub-style IDs and those links work on both.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../analysis-plan.md &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/edit/master/quarto/analysis-plan.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
