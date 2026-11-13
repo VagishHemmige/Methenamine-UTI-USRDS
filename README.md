@@ -25,6 +25,6 @@ https://vagishhemmige.github.io/Methenamine-UTI-USRDS/
 
 ## Running the analysis
 
-Run `R/main.R` from the project root. For now it runs only the starter's synthetic example. The analysis will require authorized access to the USRDS files, located through the usRds package.
+Run `R/main.R` from the project root. For now it runs only the starter's synthetic example. The analysis will require authorized access to the USRDS files, located through the [{usRds}](https://vagishhemmige.github.io/usRds/) package.
 
 <!-- Results: add only when the figures and tables are cleared for public release. -->
