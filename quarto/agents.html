@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-66ae90e4418e9d0ac3caa4b8c3bef75c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9c6fd4a99ff4209dd1149a1765198857.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/issue-comments-0.3.0/issue-comments.js"></script>
 <link href="../site_libs/quarto-contrib/issue-comments-0.3.0/issue-comments.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -125,17 +125,6 @@ div.callout-Rcode.callout-style-default .callout-icon::before, div.callout-Rcode
   content: '💻';
   background-image: none;
 }
-div.callout-Pending.callout {
-  border-left-color: #f0c400;
-}
-div.callout-Pending.callout-style-default > .callout-header {
-  background-color: rgba(240, 196, 0, 0.13);
-}
-div.callout-Pending .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-Pending.callout-style-default .callout-icon::before, div.callout-Pending.callout-titled .callout-icon::before {
-  content: '⏳';
-  background-image: none;
-}
 div.callout-Results.callout {
   border-left-color: #198754;
 }
@@ -145,6 +134,17 @@ div.callout-Results.callout-style-default > .callout-header {
 div.callout-Results .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-Results.callout-style-default .callout-icon::before, div.callout-Results.callout-titled .callout-icon::before {
   content: '📊';
+  background-image: none;
+}
+div.callout-Pending.callout {
+  border-left-color: #f0c400;
+}
+div.callout-Pending.callout-style-default > .callout-header {
+  background-color: rgba(240, 196, 0, 0.13);
+}
+div.callout-Pending .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-Pending.callout-style-default .callout-icon::before, div.callout-Pending.callout-titled .callout-icon::before {
+  content: '⏳';
   background-image: none;
 }
 </style>
@@ -409,7 +409,7 @@ edit that file, not this page. Its first heading is the page title.
 <ul>
 <li><strong><code>analysis-plan.md</code> is the source of truth for design.</strong> Code implements the plan; it does not redefine it. If code needs to depart from the plan, open a decision issue, or comment on the existing one, for the deciders. Once a decider has settled it (in the issue, or relayed there in their exact words), the plan change and the code can go in the same pull request, which closes the issue.</li>
 <li><strong>Deciders.</strong> Scientific decisions are made by: Vagish Hemmige, in every area. Anyone may open or contribute to a decision issue; only a decider settles it (see “Working with agents”).</li>
-<li><strong>This is an analysis project, not an R package.</strong> Do not add DESCRIPTION, NAMESPACE, roxygen, or pkgdown infrastructure, or apply CRAN conventions.</li>
+<li><strong>This is an analysis project, not an R package.</strong> Do not add DESCRIPTION, NAMESPACE, roxygen, or <a href="https://pkgdown.r-lib.org/">{pkgdown}</a> infrastructure, or apply CRAN conventions.</li>
 <li><strong>Default branch:</strong> <code>master</code>, protected. Changes reach it only through pull requests.</li>
 </ul>
 </section>
@@ -438,7 +438,7 @@ edit that file, not this page. Its first heading is the page title.
 <tbody>
 <tr class="odd">
 <td>USRDS standard analysis files, including linked Medicare claims, payer history and Part D drug events and enrollment (release as recorded for each result)</td>
-<td>usRds (<code>load_usrds_file()</code>, <code>get_IN_ICD()</code>, <code>get_PS_ICD()</code>; Part D functions not yet available)</td>
+<td>{usRds} (<code>load_usrds_file()</code>, <code>get_IN_ICD()</code>, <code>get_PS_ICD()</code>; Part D functions not yet available)</td>
 <td>https://vagishhemmige.github.io/usRds/</td>
 <td>This team</td>
 <td>Restricted (USRDS data use agreement)</td>
@@ -531,7 +531,7 @@ edit that file, not this page. Its first heading is the page title.
 <section id="coding-conventions" class="level2">
 <h2 class="anchored" data-anchor-id="coding-conventions">Coding conventions</h2>
 <ul>
-<li><strong>Cohort flow</strong> uses the <code>flowchart</code> package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through <code>fc_filter()</code>, in the plan’s order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person’s records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (<code>fc_view(what = "data")</code>). Flowchart labels are built from constants in <code>setup.R</code>.</li>
+<li><strong>Cohort flow</strong> uses the <a href="https://bruigtp.github.io/flowchart/">{flowchart}</a> package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through <code>fc_filter()</code>, in the plan’s order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person’s records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (<code>fc_view(what = "data")</code>). Flowchart labels are built from constants in <code>setup.R</code>.</li>
 <li><strong>Code lists</strong> carry each code’s category, code system and version, and matching rule (exact or prefix). Check every code against the official code set. Never invent codes, variables, files, or definitions.</li>
 <li><strong>Joins</strong> use <code>join_by()</code> with an explicit <code>relationship</code> where possible. After every interval join and every join of records to people, assert that rows did not multiply, and decide deliberately what happens to unmatched rows.</li>
 <li><strong>Dates and windows</strong> are written as inclusive offsets from the index date, matching the plan, and the edges are tested on synthetic data.</li>

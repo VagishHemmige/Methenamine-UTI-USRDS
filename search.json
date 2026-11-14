@@ -1,16 +1,5 @@
 [
   {
-    "objectID": "quarto/architecture.html",
-    "href": "quarto/architecture.html",
-    "title": "",
-    "section": "",
-    "text": "Project documentsArchitecture Code\n\n\n\n\n\n\nArchitecture\nARCHITECTURE.md has not been written yet.",
-    "crumbs": [
-      "Project documents",
-      "Architecture"
-    ]
-  },
-  {
     "objectID": "quarto/analysis-plan.html",
     "href": "quarto/analysis-plan.html",
     "title": "",
@@ -103,7 +92,7 @@
     "href": "quarto/analysis-plan.html#7-outcomes",
     "title": "",
     "section": "7. Outcomes",
-    "text": "7. Outcomes\n\n7.1 Treated UTI episode (primary building block)\nInpatient. An inpatient stay with a UTI or pyelonephritis code in the principal position (sensitivity: any position).\n\nOutpatient. An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. Open: #6 the treatment window.\n\nEpisodes. Codes and treatment within 14 days are one episode; the episode date is its first code.\n\n\n7.2 Primary outcome\nNumber of treated UTI episodes within 12 months after the 30-day grace period ends, summarized as the mean cumulative count with death as a competing event14.\n\nOpen: #7 whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast.\n\n\n\n7.3 Secondary outcomes\nUTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; Clostridioides difficile infection; all-cause hospitalization; graft failure; death; Medicare payments (via usRds cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).\n\n\n7.4 Follow-up and censoring\nFollow-up runs 12 months from time zero, until the outcome count horizon, death, graft failure, retransplant, loss of eligible observation (§3.1), or the administrative end date (L13), with the censoring reason recorded.",
+    "text": "7. Outcomes\n\n7.1 Treated UTI episode (primary building block)\nInpatient. An inpatient stay with a UTI or pyelonephritis code in the principal position (sensitivity: any position).\n\nOutpatient. An outpatient institutional or physician/supplier encounter with a UTI code (cystitis, pyelonephritis, UTI site unspecified, catheter-associated UTI) and a treatment-dose antibiotic fill or Part B antibiotic administration from day −3 to +5. Prophylaxis-dose fills do not count. Open: #6 the treatment window.\n\nEpisodes. Codes and treatment within 14 days are one episode; the episode date is its first code.\n\n\n7.2 Primary outcome\nNumber of treated UTI episodes within 12 months after the 30-day grace period ends, summarized as the mean cumulative count with death as a competing event14.\n\nOpen: #7 whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast.\n\n\n\n7.3 Secondary outcomes\nUTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; Clostridioides difficile infection; all-cause hospitalization; graft failure; death; Medicare payments (via {usRds} cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).\n\n\n7.4 Follow-up and censoring\nFollow-up runs 12 months from time zero, until the outcome count horizon, death, graft failure, retransplant, loss of eligible observation (§3.1), or the administrative end date (L13), with the censoring reason recorded.",
     "crumbs": [
       "Project documents",
       "Analysis plan"
@@ -114,7 +103,7 @@
     "href": "quarto/analysis-plan.html#8-statistical-analysis",
     "title": "",
     "section": "8. Statistical analysis",
-    "text": "8. Statistical analysis\n\n8.1 Descriptive analysis (Aim 1)\nAnnual period prevalence of each exposure per 1,000 Part D-covered recipient-years, by calendar year and center; interrupted time-series description around March 2022 (descriptive, not causal).\n\n\n8.2 Primary analysis (Aim 2)\n\nClone–censor–weight. Each eligible person is cloned into all three strategies at time zero. A clone is censored when its observed treatment deviates from its strategy (for example, a strategy C clone that fills methenamine on day 12). Censoring is modeled with pooled logistic regression on baseline and time-varying covariates (§5.8), giving stabilized inverse-probability-of-censoring weights10. Censoring at loss of eligible observation (L1–L3) is weighted in the same framework.\nEstimands. Weighted mean cumulative counts and 12-month risks of UTI hospitalization by strategy. Contrasts: A vs. C (does methenamine reduce UTIs compared with no prophylaxis?) and A vs. B (how does it compare with antibiotic prophylaxis?). Report rate ratios and differences with bootstrap 95% CIs (resampling persons).\nPer-protocol. Additionally censor at discontinuation or switching (§5.4) with time-varying weights.\nDiagnostics. Weight distribution and truncation (1st/99th percentile as sensitivity), covariate balance after weighting, positivity by center and period.\nSample size. Determined by available data; contrasts are not described as formally powered. Report precision.\n\n\n\n8.3 Vaginal estrogen trial (Aim 3)\nSame machinery as Aim 2, restricted to women aged ≥50 (menopause proxy) meeting §4. Strategies: initiate vaginal estrogen within 30 days vs. not. Initiation of methenamine or antibiotic prophylaxis during follow-up is a time-varying covariate in the censoring weights for the per-protocol analysis; it is not a deviation in the intention-to-initiate analysis.\n\nOpen: #8 the age threshold.\n\n\n\n8.4 Pre/post with a regression-to-the-mean reference (Aim 4)\nAmong methenamine initiators, compare treated UTI episode rates in the 12 months before and after initiation (Poisson or negative binomial with person-level clustering, as in the 2019 protocol). Repeat the identical calculation among eligible non-initiators anchored at the same qualifying-episode definition and matched on prior UTI count, time since transplant and calendar year. The difference between the two before/after ratios is the descriptive quantity of interest. Report this analysis as illustrating regression to the mean, not as a causal effect.\n\n\n8.5 Effect modification and subgroups\nPrespecified subgroups: sex, age ≥65, diabetes, time since transplant (&lt;2 vs ≥2 years), urologic primary disease, ICD era.\n\n\n8.6 Multiplicity\n\nOpen: #10 not yet specified.\n\n\n\n8.7 Missing data\n\nOpen: #11 not yet specified.\n\n\n\n8.8 Software\nR, with USRDS files accessed through usRds. Record the usRds version or commit and the USRDS release for every result.",
+    "text": "8. Statistical analysis\n\n8.1 Descriptive analysis (Aim 1)\nAnnual period prevalence of each exposure per 1,000 Part D-covered recipient-years, by calendar year and center; interrupted time-series description around March 2022 (descriptive, not causal).\n\n\n8.2 Primary analysis (Aim 2)\n\nClone–censor–weight. Each eligible person is cloned into all three strategies at time zero. A clone is censored when its observed treatment deviates from its strategy (for example, a strategy C clone that fills methenamine on day 12). Censoring is modeled with pooled logistic regression on baseline and time-varying covariates (§5.8), giving stabilized inverse-probability-of-censoring weights10. Censoring at loss of eligible observation (L1–L3) is weighted in the same framework.\nEstimands. Weighted mean cumulative counts and 12-month risks of UTI hospitalization by strategy. Contrasts: A vs. C (does methenamine reduce UTIs compared with no prophylaxis?) and A vs. B (how does it compare with antibiotic prophylaxis?). Report rate ratios and differences with bootstrap 95% CIs (resampling persons).\nPer-protocol. Additionally censor at discontinuation or switching (§5.4) with time-varying weights.\nDiagnostics. Weight distribution and truncation (1st/99th percentile as sensitivity), covariate balance after weighting, positivity by center and period.\nSample size. Determined by available data; contrasts are not described as formally powered. Report precision.\n\n\n\n8.3 Vaginal estrogen trial (Aim 3)\nSame machinery as Aim 2, restricted to women aged ≥50 (menopause proxy) meeting §4. Strategies: initiate vaginal estrogen within 30 days vs. not. Initiation of methenamine or antibiotic prophylaxis during follow-up is a time-varying covariate in the censoring weights for the per-protocol analysis; it is not a deviation in the intention-to-initiate analysis.\n\nOpen: #8 the age threshold.\n\n\n\n8.4 Pre/post with a regression-to-the-mean reference (Aim 4)\nAmong methenamine initiators, compare treated UTI episode rates in the 12 months before and after initiation (Poisson or negative binomial with person-level clustering, as in the 2019 protocol). Repeat the identical calculation among eligible non-initiators anchored at the same qualifying-episode definition and matched on prior UTI count, time since transplant and calendar year. The difference between the two before/after ratios is the descriptive quantity of interest. Report this analysis as illustrating regression to the mean, not as a causal effect.\n\n\n8.5 Effect modification and subgroups\nPrespecified subgroups: sex, age ≥65, diabetes, time since transplant (&lt;2 vs ≥2 years), urologic primary disease, ICD era.\n\n\n8.6 Multiplicity\n\nOpen: #10 not yet specified.\n\n\n\n8.7 Missing data\n\nOpen: #11 not yet specified.\n\n\n\n8.8 Software\nR, with USRDS files accessed through {usRds}. Record the {usRds} version or commit and the USRDS release for every result.",
     "crumbs": [
       "Project documents",
       "Analysis plan"
@@ -223,30 +212,6 @@
     ]
   },
   {
-    "objectID": "quarto/functions.html",
-    "href": "quarto/functions.html",
-    "title": "Functions",
-    "section": "",
-    "text": "This script defines the reusable helper functions used by the analysis scripts.",
-    "crumbs": [
-      "Code",
-      "Setup and helper functions",
-      "Functions"
-    ]
-  },
-  {
-    "objectID": "quarto/functions.html#scale-values",
-    "href": "quarto/functions.html#scale-values",
-    "title": "Functions",
-    "section": "Scale values",
-    "text": "Scale values\nThe starter’s demonstration helper: scale_values() multiplies a vector of values by a multiplier and returns the result. The example step uses it.\n\n\nClick to show/hide R Code\nscale_values &lt;- function(values, multiplier) {\n  values * multiplier\n}",
-    "crumbs": [
-      "Code",
-      "Setup and helper functions",
-      "Functions"
-    ]
-  },
-  {
     "objectID": "quarto/repository-blueprint.html",
     "href": "quarto/repository-blueprint.html",
     "title": "",
@@ -291,6 +256,92 @@
     ]
   },
   {
+    "objectID": "quarto/about.html",
+    "href": "quarto/about.html",
+    "title": "About",
+    "section": "",
+    "text": "This study asks whether methenamine hippurate, compared with antibiotic prophylaxis or with neither, reduces recurrent urinary tract infection after kidney transplantation. It is at the planning stage: there is no active IRB approval, no data are in use, and the analysis plan is a draft.\n\nVagish Hemmige\n\nVagish Hemmige makes the scientific decisions. Open decisions are marked in the analysis plan and listed in GitHub Issues.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "quarto/about.html#the-study",
+    "href": "quarto/about.html#the-study",
+    "title": "About",
+    "section": "",
+    "text": "This study asks whether methenamine hippurate, compared with antibiotic prophylaxis or with neither, reduces recurrent urinary tract infection after kidney transplantation. It is at the planning stage: there is no active IRB approval, no data are in use, and the analysis plan is a draft.\n\nVagish Hemmige\n\nVagish Hemmige makes the scientific decisions. Open decisions are marked in the analysis plan and listed in GitHub Issues.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "quarto/about.html#this-repository",
+    "href": "quarto/about.html#this-repository",
+    "title": "About",
+    "section": "This repository",
+    "text": "This repository\nR/main.R will run the scripts in order. For now the scripts are the R Analysis Workflow plugin’s starter files, which run on a few synthetic numbers and touch no data. The study will use the United States Renal Data System (USRDS), including its linked Medicare claims, loaded through the {usRds} package. USRDS data are restricted under a data use agreement, so they will never be in the repository; the code will run only where an authorized person has access to them.\nContributions follow the rules in AGENTS.md; known issues and open decisions are tracked in Issues.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "quarto/about.html#how-this-website-was-created",
+    "href": "quarto/about.html#how-this-website-was-created",
+    "title": "About",
+    "section": "How this website was created",
+    "text": "How this website was created\nThe site is built with Quarto from the analysis scripts themselves. Each code page imports the labelled sections of its script from R/ and shows them with an explanation; the site never runs the analysis, so it is built without the analysis data. A GitHub Actions workflow renders and publishes it whenever master changes.\nThe repository follows the R Analysis Workflow plugin and the layout of Cryptococcus-missed-diagnosis-USRDS. AI assistants may help draft and review code and documentation. They never see USRDS data, they work on synthetic data only, and changes reach master through pull requests a person reviews and merges.\nFour documents describe the project. In short: the plan is the scientific intent, the architecture is the workflow as implemented, and AGENTS.md holds the rules for working together.\n\nAnalysis plan: what the analysis is meant to do, and why. The question, the population, the methods, and the open decisions. Code implements it and does not redefine it.\nArchitecture: how the code does it. The scripts, the order they run in, what each needs and produces, and how data flow between them.\nAGENTS.md: how people and AI assistants work on the project. Rules for restricted data, coding, checks, proposing changes and getting a person’s approval.\nRepository blueprint: the layout every project of this kind starts from, which the architecture document then describes as built.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "quarto/about.html#pages",
+    "href": "quarto/about.html#pages",
+    "title": "About",
+    "section": "Pages",
+    "text": "Pages\n\nClinical background: why the question matters and what earlier studies found.\nSetup: packages and shared constants.\nFunctions: reusable helper functions.\n1. Example step: the starter’s synthetic demonstration step, to be replaced by the first real script.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "quarto/setup.html",
+    "href": "quarto/setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "This script attaches the packages and defines the constants every other script uses.",
+    "crumbs": [
+      "Code",
+      "Setup and helper functions",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "quarto/setup.html#packages",
+    "href": "quarto/setup.html#packages",
+    "title": "Setup",
+    "section": "Packages",
+    "text": "Packages\nNo packages are attached yet. When code is written, every package the analysis uses is attached here, including {usRds} for the USRDS files.\n\n\nClick to show/hide R Code\n# library(&lt;package&gt;)   # every package the analysis uses is attached here",
+    "crumbs": [
+      "Code",
+      "Setup and helper functions",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "quarto/setup.html#constants",
+    "href": "quarto/setup.html#constants",
+    "title": "Setup",
+    "section": "Constants",
+    "text": "Constants\nThe starter’s one constant, a multiplier used by the synthetic example step. The study’s windows, thresholds and code lists from the analysis plan will be defined here.\n\n\nClick to show/hide R Code\ndemonstration_multiplier &lt;- 2",
+    "crumbs": [
+      "Code",
+      "Setup and helper functions",
+      "Setup"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Overview",
@@ -315,7 +366,7 @@
     "href": "index.html#what-this-analysis-does",
     "title": "Overview",
     "section": "What this analysis does",
-    "text": "What this analysis does\nThis study will use the United States Renal Data System (USRDS), with linked Medicare Parts A, B and D claims, to describe how methenamine, prophylactic-dose antibiotics and vaginal estrogen are used after kidney transplantation. It will also compare starting methenamine, starting antibiotic prophylaxis, or starting neither among recipients with recurrent UTI.",
+    "text": "What this analysis does\nThis study will use the United States Renal Data System (USRDS), with linked Medicare Parts A, B and D claims, to describe how methenamine, prophylactic-dose antibiotics and vaginal estrogen are used after kidney transplantation. It will also compare starting methenamine, starting antibiotic prophylaxis, or starting neither among recipients with recurrent UTI.\nBraces identify R packages throughout this site.",
     "crumbs": [
       "Home"
     ]
@@ -341,6 +392,17 @@
     ]
   },
   {
+    "objectID": "quarto/architecture.html",
+    "href": "quarto/architecture.html",
+    "title": "",
+    "section": "",
+    "text": "Project documentsArchitecture Code\n\n\n\n\n\n\nArchitecture\nARCHITECTURE.md has not been written yet.",
+    "crumbs": [
+      "Project documents",
+      "Architecture"
+    ]
+  },
+  {
     "objectID": "quarto/agents.html",
     "href": "quarto/agents.html",
     "title": "",
@@ -356,7 +418,7 @@
     "href": "quarto/agents.html#the-project",
     "title": "",
     "section": "The project",
-    "text": "The project\nThis repository plans a study of methenamine hippurate, prophylactic-dose antibiotics and vaginal estrogen for recurrent urinary tract infection after kidney transplantation, using USRDS data with linked Medicare Parts A, B and D claims. It is a planning repository: there is no active IRB approval, no data are in use, and the analysis plan is a draft. The plan and, later, the code are published as a Quarto website.\n\nanalysis-plan.md is the source of truth for design. Code implements the plan; it does not redefine it. If code needs to depart from the plan, open a decision issue, or comment on the existing one, for the deciders. Once a decider has settled it (in the issue, or relayed there in their exact words), the plan change and the code can go in the same pull request, which closes the issue.\nDeciders. Scientific decisions are made by: Vagish Hemmige, in every area. Anyone may open or contribute to a decision issue; only a decider settles it (see “Working with agents”).\nThis is an analysis project, not an R package. Do not add DESCRIPTION, NAMESPACE, roxygen, or pkgdown infrastructure, or apply CRAN conventions.\nDefault branch: master, protected. Changes reach it only through pull requests.",
+    "text": "The project\nThis repository plans a study of methenamine hippurate, prophylactic-dose antibiotics and vaginal estrogen for recurrent urinary tract infection after kidney transplantation, using USRDS data with linked Medicare Parts A, B and D claims. It is a planning repository: there is no active IRB approval, no data are in use, and the analysis plan is a draft. The plan and, later, the code are published as a Quarto website.\n\nanalysis-plan.md is the source of truth for design. Code implements the plan; it does not redefine it. If code needs to depart from the plan, open a decision issue, or comment on the existing one, for the deciders. Once a decider has settled it (in the issue, or relayed there in their exact words), the plan change and the code can go in the same pull request, which closes the issue.\nDeciders. Scientific decisions are made by: Vagish Hemmige, in every area. Anyone may open or contribute to a decision issue; only a decider settles it (see “Working with agents”).\nThis is an analysis project, not an R package. Do not add DESCRIPTION, NAMESPACE, roxygen, or {pkgdown} infrastructure, or apply CRAN conventions.\nDefault branch: master, protected. Changes reach it only through pull requests.",
     "crumbs": [
       "Project documents",
       "AGENTS.md"
@@ -367,7 +429,7 @@
     "href": "quarto/agents.html#data-sources",
     "title": "",
     "section": "Data sources",
-    "text": "Data sources\nEach source this project uses is listed below with the package that accesses it. Code that touches a source goes through its package. Do not write project-specific loading, cleaning, or definition code for something the package already does.\n\n\n\n\n\n\n\n\n\n\n\nSource\nAccessed through\nPackage documentation\nPackage maintained by\nAccess\nWhat AI agents may do\n\n\n\n\nUSRDS standard analysis files, including linked Medicare claims, payer history and Part D drug events and enrollment (release as recorded for each result)\nusRds (load_usrds_file(), get_IN_ICD(), get_PS_ICD(); Part D functions not yet available)\nhttps://vagishhemmige.github.io/usRds/\nThis team\nRestricted (USRDS data use agreement)\nNone: code, documentation and synthetic data only\n\n\n\nTo allow more for a source, a person changes its row through a pull request, naming the agreement and section that permit it, the approved AI service, and exactly what agents may do. Agents never propose or make this change themselves, and nothing in personal instructions can grant it.\nFor every package:\n\nRead its documentation before writing code for a source, including known issues. Behavior that sets the cohort, an exposure, an outcome, or a denominator is checked in the documentation, not assumed from a function’s name.\n\nFor packages this team maintains:\n\nFacts about the source belong in the package’s documentation, not in this file. If the package lacks something this project needs to know, add it there or open an issue there.\nProblems belong in the package. If a function is wrong or does not quite do what the plan needs, open an issue in its repository. Fix it in the package (preferred when generally useful) or wrap it here with a code comment linking the issue, and remove the wrapper once the issue is fixed.\n\nFor external packages:\n\nWork around problems here. Wrap the function in R/functions.R with a comment explaining the problem and linking any upstream issue. Reporting a bug upstream is an external communication; the person directing the work decides whether to file it.\nFacts about the source that this project relies on (definitions, release quirks, suppression rules) go in references/ with a citation to the provider’s documentation, or in the plan when they shape a decision.\n\nFor a source with no package: one loading script records the download URL, the release or access date, and any processing. Verify its variables against the provider’s documentation for that release.",
+    "text": "Data sources\nEach source this project uses is listed below with the package that accesses it. Code that touches a source goes through its package. Do not write project-specific loading, cleaning, or definition code for something the package already does.\n\n\n\n\n\n\n\n\n\n\n\nSource\nAccessed through\nPackage documentation\nPackage maintained by\nAccess\nWhat AI agents may do\n\n\n\n\nUSRDS standard analysis files, including linked Medicare claims, payer history and Part D drug events and enrollment (release as recorded for each result)\n{usRds} (load_usrds_file(), get_IN_ICD(), get_PS_ICD(); Part D functions not yet available)\nhttps://vagishhemmige.github.io/usRds/\nThis team\nRestricted (USRDS data use agreement)\nNone: code, documentation and synthetic data only\n\n\n\nTo allow more for a source, a person changes its row through a pull request, naming the agreement and section that permit it, the approved AI service, and exactly what agents may do. Agents never propose or make this change themselves, and nothing in personal instructions can grant it.\nFor every package:\n\nRead its documentation before writing code for a source, including known issues. Behavior that sets the cohort, an exposure, an outcome, or a denominator is checked in the documentation, not assumed from a function’s name.\n\nFor packages this team maintains:\n\nFacts about the source belong in the package’s documentation, not in this file. If the package lacks something this project needs to know, add it there or open an issue there.\nProblems belong in the package. If a function is wrong or does not quite do what the plan needs, open an issue in its repository. Fix it in the package (preferred when generally useful) or wrap it here with a code comment linking the issue, and remove the wrapper once the issue is fixed.\n\nFor external packages:\n\nWork around problems here. Wrap the function in R/functions.R with a comment explaining the problem and linking any upstream issue. Reporting a bug upstream is an external communication; the person directing the work decides whether to file it.\nFacts about the source that this project relies on (definitions, release quirks, suppression rules) go in references/ with a citation to the provider’s documentation, or in the plan when they shape a decision.\n\nFor a source with no package: one loading script records the download URL, the release or access date, and any processing. Verify its variables against the provider’s documentation for that release.",
     "crumbs": [
       "Project documents",
       "AGENTS.md"
@@ -455,7 +517,7 @@
     "href": "quarto/agents.html#coding-conventions",
     "title": "",
     "section": "Coding conventions",
-    "text": "Coding conventions\n\nCohort flow uses the flowchart package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through fc_filter(), in the plan’s order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person’s records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (fc_view(what = \"data\")). Flowchart labels are built from constants in setup.R.\nCode lists carry each code’s category, code system and version, and matching rule (exact or prefix). Check every code against the official code set. Never invent codes, variables, files, or definitions.\nJoins use join_by() with an explicit relationship where possible. After every interval join and every join of records to people, assert that rows did not multiply, and decide deliberately what happens to unmatched rows.\nDates and windows are written as inclusive offsets from the index date, matching the plan, and the edges are tested on synthetic data.\nCode that turns model output into reported numbers lives in named functions in R/functions.R, tested on synthetic data with a known answer.\nPackage APIs: read the help page and NEWS for the installed version before calling a package; don’t write calls from memory. A test that fakes a package checks only our own logic, so call the real package once (synthetic data, or one cheap call) before relying on the code.\nStyle: readable for a clinician-analyst who learned R from online guides: pipes and dplyr/tidyr verbs, case_when(), loops over names or named lists rather than the apply family, Reduce or positional indexing. Required base R goes in a named, tested function. Tidyverse layout; style changes in their own commits.",
+    "text": "Coding conventions\n\nCohort flow uses the {flowchart} package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through fc_filter(), in the plan’s order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person’s records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (fc_view(what = \"data\")). Flowchart labels are built from constants in setup.R.\nCode lists carry each code’s category, code system and version, and matching rule (exact or prefix). Check every code against the official code set. Never invent codes, variables, files, or definitions.\nJoins use join_by() with an explicit relationship where possible. After every interval join and every join of records to people, assert that rows did not multiply, and decide deliberately what happens to unmatched rows.\nDates and windows are written as inclusive offsets from the index date, matching the plan, and the edges are tested on synthetic data.\nCode that turns model output into reported numbers lives in named functions in R/functions.R, tested on synthetic data with a known answer.\nPackage APIs: read the help page and NEWS for the installed version before calling a package; don’t write calls from memory. A test that fakes a package checks only our own logic, so call the real package once (synthetic data, or one cheap call) before relying on the code.\nStyle: readable for a clinician-analyst who learned R from online guides: pipes and dplyr/tidyr verbs, case_when(), loops over names or named lists rather than the apply family, Reduce or positional indexing. Required base R goes in a named, tested function. Tidyverse layout; style changes in their own commits.",
     "crumbs": [
       "Project documents",
       "AGENTS.md"
@@ -484,92 +546,6 @@
     ]
   },
   {
-    "objectID": "quarto/about.html",
-    "href": "quarto/about.html",
-    "title": "About",
-    "section": "",
-    "text": "This study asks whether methenamine hippurate, compared with antibiotic prophylaxis or with neither, reduces recurrent urinary tract infection after kidney transplantation. It is at the planning stage: there is no active IRB approval, no data are in use, and the analysis plan is a draft.\n\nVagish Hemmige\n\nVagish Hemmige makes the scientific decisions. Open decisions are marked in the analysis plan and listed in GitHub Issues.",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "quarto/about.html#the-study",
-    "href": "quarto/about.html#the-study",
-    "title": "About",
-    "section": "",
-    "text": "This study asks whether methenamine hippurate, compared with antibiotic prophylaxis or with neither, reduces recurrent urinary tract infection after kidney transplantation. It is at the planning stage: there is no active IRB approval, no data are in use, and the analysis plan is a draft.\n\nVagish Hemmige\n\nVagish Hemmige makes the scientific decisions. Open decisions are marked in the analysis plan and listed in GitHub Issues.",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "quarto/about.html#this-repository",
-    "href": "quarto/about.html#this-repository",
-    "title": "About",
-    "section": "This repository",
-    "text": "This repository\nR/main.R will run the scripts in order. For now the scripts are the R Analysis Workflow plugin’s starter files, which run on a few synthetic numbers and touch no data. The study will use the United States Renal Data System (USRDS), including its linked Medicare claims, loaded through the usRds package. USRDS data are restricted under a data use agreement, so they will never be in the repository; the code will run only where an authorized person has access to them.\nContributions follow the rules in AGENTS.md; known issues and open decisions are tracked in Issues.",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "quarto/about.html#how-this-website-was-created",
-    "href": "quarto/about.html#how-this-website-was-created",
-    "title": "About",
-    "section": "How this website was created",
-    "text": "How this website was created\nThe site is built with Quarto from the analysis scripts themselves. Each code page imports the labelled sections of its script from R/ and shows them with an explanation; the site never runs the analysis, so it is built without the analysis data. A GitHub Actions workflow renders and publishes it whenever master changes.\nThe repository follows the R Analysis Workflow plugin and the layout of Cryptococcus-missed-diagnosis-USRDS. AI assistants may help draft and review code and documentation. They never see USRDS data, they work on synthetic data only, and changes reach master through pull requests a person reviews and merges.\nFour documents describe the project. In short: the plan is the scientific intent, the architecture is the workflow as implemented, and AGENTS.md holds the rules for working together.\n\nAnalysis plan: what the analysis is meant to do, and why. The question, the population, the methods, and the open decisions. Code implements it and does not redefine it.\nArchitecture: how the code does it. The scripts, the order they run in, what each needs and produces, and how data flow between them.\nAGENTS.md: how people and AI assistants work on the project. Rules for restricted data, coding, checks, proposing changes and getting a person’s approval.\nRepository blueprint: the layout every project of this kind starts from, which the architecture document then describes as built.",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "quarto/about.html#pages",
-    "href": "quarto/about.html#pages",
-    "title": "About",
-    "section": "Pages",
-    "text": "Pages\n\nClinical background: why the question matters and what earlier studies found.\nSetup: packages and shared constants.\nFunctions: reusable helper functions.\n1. Example step: the starter’s synthetic demonstration step, to be replaced by the first real script.",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "quarto/setup.html",
-    "href": "quarto/setup.html",
-    "title": "Setup",
-    "section": "",
-    "text": "This script attaches the packages and defines the constants every other script uses.",
-    "crumbs": [
-      "Code",
-      "Setup and helper functions",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "quarto/setup.html#packages",
-    "href": "quarto/setup.html#packages",
-    "title": "Setup",
-    "section": "Packages",
-    "text": "Packages\nNo packages are attached yet. When code is written, every package the analysis uses is attached here, including usRds for the USRDS files.\n\n\nClick to show/hide R Code\n# library(&lt;package&gt;)   # every package the analysis uses is attached here",
-    "crumbs": [
-      "Code",
-      "Setup and helper functions",
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "quarto/setup.html#constants",
-    "href": "quarto/setup.html#constants",
-    "title": "Setup",
-    "section": "Constants",
-    "text": "Constants\nThe starter’s one constant, a multiplier used by the synthetic example step. The study’s windows, thresholds and code lists from the analysis plan will be defined here.\n\n\nClick to show/hide R Code\ndemonstration_multiplier &lt;- 2",
-    "crumbs": [
-      "Code",
-      "Setup and helper functions",
-      "Setup"
-    ]
-  },
-  {
     "objectID": "quarto/background.html",
     "href": "quarto/background.html",
     "title": "Clinical background",
@@ -578,6 +554,30 @@
     "crumbs": [
       "Background",
       "Clinical background"
+    ]
+  },
+  {
+    "objectID": "quarto/functions.html",
+    "href": "quarto/functions.html",
+    "title": "Functions",
+    "section": "",
+    "text": "This script defines the reusable helper functions used by the analysis scripts.",
+    "crumbs": [
+      "Code",
+      "Setup and helper functions",
+      "Functions"
+    ]
+  },
+  {
+    "objectID": "quarto/functions.html#scale-values",
+    "href": "quarto/functions.html#scale-values",
+    "title": "Functions",
+    "section": "Scale values",
+    "text": "Scale values\nThe starter’s demonstration helper: scale_values() multiplies a vector of values by a multiplier and returns the result. The example step uses it.\n\n\nClick to show/hide R Code\nscale_values &lt;- function(values, multiplier) {\n  values * multiplier\n}",
+    "crumbs": [
+      "Code",
+      "Setup and helper functions",
+      "Functions"
     ]
   }
 ]
