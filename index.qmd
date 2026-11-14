@@ -11,6 +11,8 @@ Single-center studies report fewer urinary tract infections (UTIs) after kidney 
 
 This study will use the United States Renal Data System (USRDS), with linked Medicare Parts A, B and D claims, to describe how methenamine, prophylactic-dose antibiotics and vaginal estrogen are used after kidney transplantation. It will also compare starting methenamine, starting antibiotic prophylaxis, or starting neither among recipients with recurrent UTI.
 
+[Braces](https://forum.posit.co/t/curly-braces-around-package-name-convention/122547) identify R packages throughout this site.
+
 ## Methods
 
 The comparisons are emulations of target trials, analyzed by cloning, censoring and weighting, with reporting following STROBE, RECORD and TARGET [@hernan2016target; @vonelm2007strobe; @benchimol2015record; @cashin2025target]. The [analysis plan](quarto/analysis-plan.qmd) is the authoritative specification.

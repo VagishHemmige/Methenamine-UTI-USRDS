@@ -19,7 +19,7 @@ This repository plans a study of methenamine hippurate, prophylactic-dose antibi
 
 - **`analysis-plan.md` is the source of truth for design.** Code implements the plan; it does not redefine it. If code needs to depart from the plan, open a decision issue, or comment on the existing one, for the deciders. Once a decider has settled it (in the issue, or relayed there in their exact words), the plan change and the code can go in the same pull request, which closes the issue.
 - **Deciders.** Scientific decisions are made by: Vagish Hemmige, in every area. Anyone may open or contribute to a decision issue; only a decider settles it (see "Working with agents").
-- **This is an analysis project, not an R package.** Do not add DESCRIPTION, NAMESPACE, roxygen, or pkgdown infrastructure, or apply CRAN conventions.
+- **This is an analysis project, not an R package.** Do not add DESCRIPTION, NAMESPACE, roxygen, or [{pkgdown}](https://pkgdown.r-lib.org/) infrastructure, or apply CRAN conventions.
 - **Default branch:** `master`, protected. Changes reach it only through pull requests.
 
 ## Data sources
@@ -28,7 +28,7 @@ Each source this project uses is listed below with the package that accesses it.
 
 | Source | Accessed through | Package documentation | Package maintained by | Access | What AI agents may do |
 |---|---|---|---|---|---|
-| USRDS standard analysis files, including linked Medicare claims, payer history and Part D drug events and enrollment (release as recorded for each result) | usRds (`load_usrds_file()`, `get_IN_ICD()`, `get_PS_ICD()`; Part D functions not yet available) | https://vagishhemmige.github.io/usRds/ | This team | Restricted (USRDS data use agreement) | None: code, documentation and synthetic data only |
+| USRDS standard analysis files, including linked Medicare claims, payer history and Part D drug events and enrollment (release as recorded for each result) | {usRds} (`load_usrds_file()`, `get_IN_ICD()`, `get_PS_ICD()`; Part D functions not yet available) | https://vagishhemmige.github.io/usRds/ | This team | Restricted (USRDS data use agreement) | None: code, documentation and synthetic data only |
 
 To allow more for a source, a person changes its row through a pull request, naming the agreement and section that permit it, the approved AI service, and exactly what agents may do. Agents never propose or make this change themselves, and nothing in personal instructions can grant it.
 
@@ -112,7 +112,7 @@ The **Access** column of "Data sources" says which sources are restricted. For e
 
 ## Coding conventions
 
-- **Cohort flow** uses the `flowchart` package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through `fc_filter()`, in the plan's order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person's records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (`fc_view(what = "data")`). Flowchart labels are built from constants in `setup.R`.
+- **Cohort flow** uses the [{flowchart}](https://bruigtp.github.io/flowchart/) package, so the STROBE flow diagram and the analytic cohort come from the same code. Every inclusion or exclusion goes through `fc_filter()`, in the plan's order. Never remove people from the cohort outside the flowchart. Record-level processing (cleaning claims, choosing among a person's records) is fine. An analysis that uses fewer people than the cohort (complete cases, a subgroup) reports its own number with that analysis. The cohort used downstream is the data from the final step (`fc_view(what = "data")`). Flowchart labels are built from constants in `setup.R`.
 - **Code lists** carry each code's category, code system and version, and matching rule (exact or prefix). Check every code against the official code set. Never invent codes, variables, files, or definitions.
 - **Joins** use `join_by()` with an explicit `relationship` where possible. After every interval join and every join of records to people, assert that rows did not multiply, and decide deliberately what happens to unmatched rows.
 - **Dates and windows** are written as inclusive offsets from the index date, matching the plan, and the edges are tested on synthetic data.

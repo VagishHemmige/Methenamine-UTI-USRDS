@@ -22,7 +22,7 @@ knitr::read_chunk("../R/setup.R")
 
 ## Packages
 
-No packages are attached yet. When code is written, every package the analysis uses is attached here, including `usRds` for the USRDS files.
+No packages are attached yet. When code is written, every package the analysis uses is attached here, including [{usRds}](https://vagishhemmige.github.io/usRds/) for the USRDS files.
 
 ```{r}
 #| label: load-packages

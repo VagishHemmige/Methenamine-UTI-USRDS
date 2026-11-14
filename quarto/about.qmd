@@ -13,7 +13,7 @@ Vagish Hemmige makes the scientific decisions. Open decisions are marked in the 
 
 ## This repository
 
-`R/main.R` will run the scripts in order. For now the scripts are the R Analysis Workflow plugin's starter files, which run on a few synthetic numbers and touch no data. The study will use the United States Renal Data System (USRDS), including its linked Medicare claims, loaded through the [usRds](https://vagishhemmige.github.io/usRds/) package. USRDS data are restricted under a data use agreement, so they will never be in the repository; the code will run only where an authorized person has access to them.
+`R/main.R` will run the scripts in order. For now the scripts are the R Analysis Workflow plugin's starter files, which run on a few synthetic numbers and touch no data. The study will use the United States Renal Data System (USRDS), including its linked Medicare claims, loaded through the [{usRds}](https://vagishhemmige.github.io/usRds/) package. USRDS data are restricted under a data use agreement, so they will never be in the repository; the code will run only where an authorized person has access to them.
 
 Contributions follow the rules in [`AGENTS.md`](agents.qmd); known issues and open decisions are tracked in [Issues](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues).
 

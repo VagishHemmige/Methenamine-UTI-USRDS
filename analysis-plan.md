@@ -142,7 +142,7 @@ Number of treated UTI episodes within 12 months after the 30-day grace period en
 **Open:** [#7](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/7) whether the count starts at time zero or after the grace period; starting at time zero is preferred for the intention-to-initiate contrast.
 
 ### 7.3 Secondary outcomes
-UTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; *Clostridioides difficile* infection; all-cause hospitalization; graft failure; death; Medicare payments (via `usRds` cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).
+UTI hospitalization (principal diagnosis); urosepsis or bacteremia with a urinary source; days of treatment-dose antibiotic supply; *Clostridioides difficile* infection; all-cause hospitalization; graft failure; death; Medicare payments (via [{usRds}](https://vagishhemmige.github.io/usRds/) cost functions, inflation-adjusted). Exploratory: fluconazole-treated candidiasis; resistant-organism codes (ICD-10 era only).
 
 ### 7.4 Follow-up and censoring
 Follow-up runs 12 months from time zero, until the outcome count horizon, death, graft failure, retransplant, loss of eligible observation ([§3.1](#31-files-and-observation)), or the administrative end date (L13), with the censoring reason recorded.
@@ -178,7 +178,7 @@ Prespecified subgroups: sex, age ≥65, diabetes, time since transplant (<2 vs �
 **Open:** [#11](https://github.com/VagishHemmige/Methenamine-UTI-USRDS/issues/11) not yet specified.
 
 ### 8.8 Software
-R, with USRDS files accessed through `usRds`. Record the `usRds` version or commit and the USRDS release for every result.
+R, with USRDS files accessed through {usRds}. Record the {usRds} version or commit and the USRDS release for every result.
 
 ## 9. Sensitivity analyses
 
